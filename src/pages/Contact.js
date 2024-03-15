@@ -1,8 +1,13 @@
 import React, { Component } from "react";
-import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 import MobileMenu from "../components/MobileMenu";
+import NavBar from "../components/NavBar";
 class Contact extends Component {
+  state = {
+    name: "",
+    message: "",
+  };
+
   render() {
     return (
       <div>
@@ -14,7 +19,7 @@ class Contact extends Component {
         <div
           className="breadcrumb-area breadcrumb-bg"
           style={{
-            backgroundImage: `url(assets/img/backgrounds/funfact-bg.jpg)`
+            backgroundImage: `url(assets/img/services/grass-top-view.jpg)`,
           }}
         >
           <div className="container">
@@ -44,9 +49,14 @@ class Contact extends Component {
                 <div className="col">
                   <div className="contact-map">
                     <iframe
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d92092.78788021083!2d-79.64834157495791!3d43.83717922399449!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b268883243a77%3A0xdd95317585aa054b!2sVaughan%2C%20ON!5e0!3m2!1sen!2sca!4v1710544088055!5m2!1sen!2sca"
+                      width="600"
+                      height="450"
+                      style={{ border: 0 }}
                       title="google-map"
-                      src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d392436.93004030554!2d-105.13838587646829!3d39.7265847007123!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sbd!4v1558429398879!5m2!1sen!2sbd"
                       allowFullScreen
+                      loading="lazy"
+                      referrerpolicy="no-referrer-when-downgrade"
                     ></iframe>
                   </div>
                 </div>
@@ -56,33 +66,28 @@ class Contact extends Component {
                   <div className="contact-information">
                     <h3>Contact Information</h3>
                     <ul>
-                      <li>
+                      <li className="align-items-center">
                         <span className="icon">
                           <i className="ion-android-map" />
                         </span>
-                        <span className="text">
-                          <span>
-                            Stock Building, 125 Main Street 1st Lane, San
-                            Francisco, USA
-                          </span>
-                        </span>
+                        <span className="text">Vaughan, Ontario</span>
                       </li>
-                      <li>
+                      <li className="align-items-center">
                         <span className="icon">
                           <i className="ion-ios-telephone-outline" />
                         </span>
                         <span className="text">
-                          <a href="tel:1234567890">(001) 24568 365 987</a>
-                          <a href="tel:1234567890">(001) 65897 569 784</a>
+                          <a href="tel:6472335873">(647) 233 5873</a>
                         </span>
                       </li>
-                      <li>
+                      <li className="align-items-center">
                         <span className="icon">
                           <i className="ion-ios-email-outline" />
                         </span>
                         <span className="text">
-                          <a href="mailto:info@example.com">info@example.com</a>
-                          <a href="mailto:info@example.com">info@example.com</a>
+                          <a href="mailto:isaac_palomi@outlook.com">
+                            isaac_palomi@outlook.com
+                          </a>
                         </span>
                       </li>
                     </ul>
@@ -98,13 +103,11 @@ class Contact extends Component {
                             name="con_name"
                             type="text"
                             placeholder="Your Name"
-                          />
-                        </div>
-                        <div className="col-md-6 col-12 section-space--bottom--20">
-                          <input
-                            name="con_email"
-                            type="email"
-                            placeholder="Your Email"
+                            onChange={({ target: { value } }) =>
+                              this.setState({
+                                name: value,
+                              })
+                            }
                           />
                         </div>
                         <div className="col-12">
@@ -112,10 +115,26 @@ class Contact extends Component {
                             name="con_message"
                             placeholder="Your Message"
                             defaultValue={""}
+                            onChange={({ target: { value } }) =>
+                              this.setState({
+                                message: value,
+                              })
+                            }
                           />
                         </div>
                         <div className="col-12">
-                          <button>Send Message</button>
+                          <button
+                            onClick={(e) => {
+                              e.preventDefault();
+                              window.location.href = `mailto:${encodeURI(
+                                `isaac_palomi@outlook.com?subject=${`Inquiry - ${this.state.name}`}&body=${
+                                  this.state.message
+                                }`
+                              )}`;
+                            }}
+                          >
+                            Send Message
+                          </button>
                         </div>
                       </div>
                     </form>

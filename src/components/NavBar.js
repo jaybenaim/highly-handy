@@ -111,7 +111,7 @@ class NavBar extends Component {
                       <div className="logo">
                         <Link to={`${process.env.REACT_APP_PUBLIC_URL}/`}>
                           <img
-                            src="assets/img/logo/logo.jpg"
+                            src="assets/img/logo/logo.png"
                             className="img-fluid w-50"
                             alt="Logo"
                           />
@@ -121,14 +121,16 @@ class NavBar extends Component {
                       <div className="header-contact-info">
                         <div className="header-info-single-item">
                           <div className="header-info-single-item__icon">
-                            <i className="zmdi zmdi-smartphone-android" />
+                            <a href="tel:6472335873">
+                              <i className="zmdi zmdi-smartphone-android" />
+                            </a>
                           </div>
                           <div className="header-info-single-item__content">
                             <h6 className="header-info-single-item__title">
                               Phone
                             </h6>
                             <p className="header-info-single-item__subtitle">
-                              647 233 5873
+                              <a href="tel:6472335873">647 233 5873</a>
                             </p>
                           </div>
                         </div>
