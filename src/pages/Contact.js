@@ -77,7 +77,7 @@ class Contact extends Component {
                           <i className="ion-ios-telephone-outline" />
                         </span>
                         <span className="text">
-                          <a href="tel:6472335873">(647) 233 5873</a>
+                          <a href="tel:6472295873">(647) 229 5873</a>
                         </span>
                       </li>
                       <li className="align-items-center">

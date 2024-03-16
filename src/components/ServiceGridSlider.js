@@ -27,20 +27,20 @@ class ServiceGridSlider extends Component {
     };
     let data = [
       {
-        img: "aeration.png",
+        img: "aeration-370x247.png",
         icon: GiHighGrass,
         serviceTitle: "Aeration",
         serviceExcerpt:
           "Aeration opens up the grass in order for the grass seeds, topsoil, and fertilizer to penetrate the ground rather than have it sit on top.",
-        serviceUrl: "service-details-aeration",
+        serviceUrl: "aeration",
       },
       {
-        img: "detatcher.jpg",
+        img: "detatcher-370x247.jpg",
         icon: GiRake,
         serviceTitle: "Dethatching",
         serviceExcerpt:
           "Dethatching is the first thing you need to do for your lawn to get the best results. It helps remove all the dead grass to allow water and sun to get an uninterrupted source of nutrients.",
-        serviceUrl: "service-details-dethatching",
+        serviceUrl: "dethatching",
       },
       {
         img: "service1.jpg",
@@ -48,7 +48,7 @@ class ServiceGridSlider extends Component {
         serviceTitle: "Window Cleaning",
         serviceExcerpt:
           "We have been cleaning windows for 10+ years and we have taken all our clients concerns and came up with a solution.",
-        serviceUrl: "service-details-window-cleaning",
+        serviceUrl: "window-cleaning",
       },
     ];
 
