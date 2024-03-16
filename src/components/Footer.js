@@ -49,12 +49,10 @@ class Footer extends Component {
                       {/* footer intro wrapper */}
                       <div className="footer-intro-wrapper">
                         <div className="footer-logo">
-                          <a
-                            href={`${process.env.REACT_APP_PUBLIC_URL}/home-one`}
-                          >
+                          <a href={`${process.env.REACT_APP_PUBLIC_URL}/`}>
                             <img
-                              src="assets/img/logo/logo-light.png"
-                              className="img-fluid"
+                              src="assets/img/logo/logo.jpg"
+                              className="img-fluid h-50 w-50"
                               alt=""
                             />
                           </a>
@@ -77,78 +75,38 @@ class Footer extends Component {
                             </a>
                           </li>
                           <li>
-                            <a href={`${process.env.REACT_APP_PUBLIC_URL}/`}>
-                              Company News
+                            <a
+                              href={`${process.env.REACT_APP_PUBLIC_URL}/services`}
+                            >
+                              Services
                             </a>
                           </li>
                           <li>
-                            <a href={`${process.env.REACT_APP_PUBLIC_URL}/`}>
-                              Projects
-                            </a>
-                          </li>
-                          <li>
-                            <a href={`${process.env.REACT_APP_PUBLIC_URL}/`}>
-                              Careers
-                            </a>
-                          </li>
-                          <li>
-                            <a href={`${process.env.REACT_APP_PUBLIC_URL}/`}>
+                            <a
+                              href={`${process.env.REACT_APP_PUBLIC_URL}/contact-us`}
+                            >
                               Contact Us
                             </a>
                           </li>
                         </ul>
                       </div>
                     </div>
-                    <div className="col-xl-2 offset-xl-1 col-lg-3 col-md-4">
-                      {/* footer widget */}
-                      <div className="footer-widget">
-                        <h4 className="footer-widget__title">USEFUL LINKS</h4>
-                        <ul className="footer-widget__navigation">
-                          <li>
-                            <a href={`${process.env.REACT_APP_PUBLIC_URL}/`}>
-                              Our Services
-                            </a>
-                          </li>
-                          <li>
-                            <a href={`${process.env.REACT_APP_PUBLIC_URL}/`}>
-                              Showcase
-                            </a>
-                          </li>
-                          <li>
-                            <a href={`${process.env.REACT_APP_PUBLIC_URL}/`}>
-                              Affliates
-                            </a>
-                          </li>
-                          <li>
-                            <a href={`${process.env.REACT_APP_PUBLIC_URL}/`}>
-                              Disclaimer
-                            </a>
-                          </li>
-                          <li>
-                            <a href={`${process.env.REACT_APP_PUBLIC_URL}/`}>
-                              Privacy Policy
-                            </a>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                    <div className="col-xl-2 offset-xl-1 col-lg-3 col-md-4">
+                    <div className="col-xl-2 offset-xl-1 col-lg-4 col-md-4">
                       {/* footer widget */}
                       <div className="footer-widget mb-0">
                         <h4 className="footer-widget__title">CONTACT US</h4>
                         <div className="footer-widget__content">
-                          <p className="address">
-                            Your address goes here, street Crossroad123.
-                          </p>
+                          <p className="address">Vaughan, ON</p>
                           <ul className="contact-details">
                             <li>
-                              <span>P:</span>99 55 66 88 526
+                              <span>P:</span>{" "}
+                              <a href="tel:6472295873">(647) 229 5873</a>
                             </li>
                             <li>
-                              <span>F:</span>55 44 77 62
-                            </li>
-                            <li>
-                              <span>E:</span>cons@email.com
+                              <span>E:</span>{" "}
+                              <a href="mailto:isaac_palomi@outlook.com">
+                                isaac_palomi@outlook.com
+                              </a>
                             </li>
                           </ul>
                         </div>
@@ -162,8 +120,9 @@ class Footer extends Component {
           <div className="footer-copyright-wrapper">
             <div className="footer-copyright text-center">
               <p className="copyright-text">
-                &copy; Castro {new Date().getFullYear()} Made With{" "}
-                <i className="fa fa-heart"></i> By HasThemes
+                <a href="https://jacobbenaim.ca">
+                  &copy; 2024 Made By Jacob Benaim
+                </a>
               </p>
             </div>
           </div>
