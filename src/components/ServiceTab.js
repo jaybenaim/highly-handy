@@ -5,7 +5,7 @@ import { Tab, TabList, TabPanel, Tabs } from "react-tabs";
 class ServiceTabExample extends Component {
   render() {
     /* service tab menu */
-    let serviceTabMenuData = [
+    const serviceTabMenuData = [
       { icon: GiHighGrass, tabMenuName: "Aeration" },
       {
         icon: GiRake,
@@ -14,7 +14,7 @@ class ServiceTabExample extends Component {
       { icon: GiFamilyHouse, tabMenuName: "Window Cleaning" },
     ];
 
-    let serviceTabMenuDatalist = serviceTabMenuData.map((val, i) => {
+    const serviceTabMenuDatalist = serviceTabMenuData.map((val, i) => {
       return (
         <Tab key={i}>
           {" "}
@@ -28,37 +28,37 @@ class ServiceTabExample extends Component {
 
     /* service tab content */
 
-    let serviceTabContentData = [
+    const serviceTabContentData = [
       {
-        bgUrl: "service-tab1.jpg",
-        contentTitle: "Land Mining",
+        bgUrl: "aeration-785x460.png",
+        contentTitle: "Aeration",
         contentDesc:
-          "Lorem ipsum dolor sit amet, consectet adipisicin elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        serviceLink: "service-details-left-sidebar",
+          "Aeration opens up the grass in order for the grass seeds, topsoil, and fertilizer to penetrate the ground rather than have it sit on top.",
+        serviceLink: "aeration",
       },
       {
-        bgUrl: "service-tab1.jpg",
-        contentTitle: "Work Management",
+        bgUrl: "detatcher-785x460.jpg",
+        contentTitle: "Dethatching",
         contentDesc:
-          "Lorem ipsum dolor sit amet, consectet adipisicin elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        serviceLink: "service-details-left-sidebar",
+          "Dethatching is the first thing you need to do for your lawn to get the best results. It helps remove all the dead grass to allow water and sun to get an uninterrupted source of nutrients.",
+        serviceLink: "dethatching",
       },
       {
-        bgUrl: "service-tab1.jpg",
-        contentTitle: "Material Engineering",
+        bgUrl: "service-tab1.png",
+        contentTitle: "Window Cleaning",
         contentDesc:
-          "Lorem ipsum dolor sit amet, consectet adipisicin elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        serviceLink: "service-details-left-sidebar",
+          "We have been cleaning windows for 10+ years and we have taken all our clients concerns and came up with a solution.",
+        serviceLink: "window-cleaning",
       },
     ];
 
-    let serviceTabContentDatalist = serviceTabContentData.map((val, i) => {
+    const serviceTabContentDatalist = serviceTabContentData.map((val, i) => {
       return (
         <TabPanel key={i}>
           <div
             className="service-tab__single-content-wrapper"
             style={{
-              backgroundImage: `url(assets/img/backgrounds/${val.bgUrl})`,
+              backgroundImage: `url(assets/img/services/${val.bgUrl})`,
             }}
           >
             <div className="service-tab__single-content">

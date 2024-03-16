@@ -58,28 +58,13 @@ class NavBar extends Component {
                       <div className="social-links social-links--white-topbar d-inline-block">
                         <ul>
                           <li>
-                            <a href="//facebook.com">
+                            <a href="https://www.facebook.com/highlyhandyLawnCare">
                               <i className="zmdi zmdi-facebook" />
                             </a>
                           </li>
                           <li>
-                            <a href="//twitter.com">
-                              <i className="zmdi zmdi-twitter" />
-                            </a>
-                          </li>
-                          <li>
-                            <a href="//vimeo.com">
-                              <i className="zmdi zmdi-vimeo" />
-                            </a>
-                          </li>
-                          <li>
-                            <a href="//linkedin.com">
-                              <i className="zmdi zmdi-linkedin-box" />
-                            </a>
-                          </li>
-                          <li>
-                            <a href="//skype.com">
-                              <i className="zmdi zmdi-skype" />
+                            <a href="https://www.instagram.com/highlyhandy_lawn_care_/">
+                              <i className="zmdi zmdi-instagram" />
                             </a>
                           </li>
                         </ul>
@@ -121,7 +106,7 @@ class NavBar extends Component {
                       <div className="header-contact-info">
                         <div className="header-info-single-item">
                           <div className="header-info-single-item__icon">
-                            <a href="tel:6472335873">
+                            <a href="tel:6472295873">
                               <i className="zmdi zmdi-smartphone-android" />
                             </a>
                           </div>
@@ -130,7 +115,7 @@ class NavBar extends Component {
                               Phone
                             </h6>
                             <p className="header-info-single-item__subtitle">
-                              <a href="tel:6472335873">647 233 5873</a>
+                              <a href="tel:6472295873">647 229 5873</a>
                             </p>
                           </div>
                         </div>
@@ -159,33 +144,45 @@ class NavBar extends Component {
                       <div className="header-navigation__nav position-static">
                         <nav>
                           <ul>
-                            <li className="has-children has-children--multilevel-submenu">
-                              <Link
-                                to={`${process.env.REACT_APP_PUBLIC_URL}/home-one`}
-                              >
+                            <li>
+                              <Link to={`${process.env.REACT_APP_PUBLIC_URL}/`}>
                                 {" "}
                                 HOME{" "}
+                              </Link>
+                            </li>
+                            <li className="has-children has-children--multilevel-submenu">
+                              <Link
+                                to={`${process.env.REACT_APP_PUBLIC_URL}/services`}
+                              >
+                                SERVICES
                               </Link>
                               <ul className="submenu">
                                 <li>
                                   <Link
-                                    to={`${process.env.REACT_APP_PUBLIC_URL}/home-one`}
+                                    to={`${process.env.REACT_APP_PUBLIC_URL}/services`}
                                   >
-                                    Homepage One
+                                    Services
                                   </Link>
                                 </li>
                                 <li>
                                   <Link
-                                    to={`${process.env.REACT_APP_PUBLIC_URL}/home-two`}
+                                    to={`${process.env.REACT_APP_PUBLIC_URL}/services/aeration`}
                                   >
-                                    Homepage Two
+                                    Aeration
                                   </Link>
                                 </li>
                                 <li>
                                   <Link
-                                    to={`${process.env.REACT_APP_PUBLIC_URL}/home-three`}
+                                    to={`${process.env.REACT_APP_PUBLIC_URL}/services/dethatching`}
                                   >
-                                    Homepage Three
+                                    Dethatching
+                                  </Link>
+                                </li>
+                                <li>
+                                  <Link
+                                    to={`${process.env.REACT_APP_PUBLIC_URL}/services/window-cleaning`}
+                                  >
+                                    Window Cleaning
                                   </Link>
                                 </li>
                               </ul>
@@ -197,96 +194,68 @@ class NavBar extends Component {
                                 ABOUT
                               </Link>
                             </li>
-                            <li className="has-children has-children--multilevel-submenu">
-                              <Link
-                                to={`${process.env.REACT_APP_PUBLIC_URL}/services`}
-                              >
-                                SERVICE
-                              </Link>
-                              <ul className="submenu">
-                                <li>
-                                  <Link
-                                    to={`${process.env.REACT_APP_PUBLIC_URL}/services`}
-                                  >
-                                    Service Page
-                                  </Link>
-                                </li>
-                                <li>
-                                  <Link
-                                    to={`${process.env.REACT_APP_PUBLIC_URL}/service-details-left-sidebar`}
-                                  >
-                                    Service Details Left Sidebar
-                                  </Link>
-                                </li>
-                                <li>
-                                  <Link
-                                    to={`${process.env.REACT_APP_PUBLIC_URL}/service-details-right-sidebar`}
-                                  >
-                                    Service Details Right Sidebar
-                                  </Link>
-                                </li>
-                              </ul>
-                            </li>
-                            <li className="has-children has-children--multilevel-submenu">
-                              <Link
-                                to={`${process.env.REACT_APP_PUBLIC_URL}/projects`}
-                              >
-                                PROJECT
-                              </Link>
-                              <ul className="submenu">
-                                <li>
-                                  <Link
-                                    to={`${process.env.REACT_APP_PUBLIC_URL}/projects`}
-                                  >
-                                    Project Page
-                                  </Link>
-                                </li>
-                                <li>
-                                  <Link
-                                    to={`${process.env.REACT_APP_PUBLIC_URL}/project-details`}
-                                  >
-                                    Project Details
-                                  </Link>
-                                </li>
-                              </ul>
-                            </li>
-                            <li className="has-children has-children--multilevel-submenu">
-                              <Link
-                                to={`${process.env.REACT_APP_PUBLIC_URL}/blog-left-sidebar`}
-                              >
-                                BLOG
-                              </Link>
-                              <ul className="submenu">
-                                <li>
-                                  <Link
-                                    to={`${process.env.REACT_APP_PUBLIC_URL}/blog-left-sidebar`}
-                                  >
-                                    Blog Left Sidebar
-                                  </Link>
-                                </li>
-                                <li>
-                                  <Link
-                                    to={`${process.env.REACT_APP_PUBLIC_URL}/blog-right-sidebar`}
-                                  >
-                                    Blog Right Sidebar
-                                  </Link>
-                                </li>
-                                <li>
-                                  <Link
-                                    to={`${process.env.REACT_APP_PUBLIC_URL}/blog-details-left-sidebar`}
-                                  >
-                                    Blog Details Left Sidebar
-                                  </Link>
-                                </li>
-                                <li>
-                                  <Link
-                                    to={`${process.env.REACT_APP_PUBLIC_URL}/blog-details-right-sidebar`}
-                                  >
-                                    Blog Details Right Sidebar
-                                  </Link>
-                                </li>
-                              </ul>
-                            </li>
+                            {/* region */}
+                            {/* <li className="has-children has-children--multilevel-submenu">
+                                <Link
+                                  to={`${process.env.REACT_APP_PUBLIC_URL}/projects`}
+                                >
+                                  PROJECT
+                                </Link>
+                                <ul className="submenu">
+                                  <li>
+                                    <Link
+                                      to={`${process.env.REACT_APP_PUBLIC_URL}/projects`}
+                                    >
+                                      Project Page
+                                    </Link>
+                                  </li>
+                                  <li>
+                                    <Link
+                                      to={`${process.env.REACT_APP_PUBLIC_URL}/project-details`}
+                                    >
+                                      Project Details
+                                    </Link>
+                                  </li>
+                                </ul>
+                              </li> */}
+                            {/* <li className="has-children has-children--multilevel-submenu">
+                                <Link
+                                  to={`${process.env.REACT_APP_PUBLIC_URL}/blog-left-sidebar`}
+                                >
+                                  BLOG
+                                </Link>
+                                <ul className="submenu">
+                                  <li>
+                                    <Link
+                                      to={`${process.env.REACT_APP_PUBLIC_URL}/blog-left-sidebar`}
+                                    >
+                                      Blog Left Sidebar
+                                    </Link>
+                                  </li>
+                                  <li>
+                                    <Link
+                                      to={`${process.env.REACT_APP_PUBLIC_URL}/blog-right-sidebar`}
+                                    >
+                                      Blog Right Sidebar
+                                    </Link>
+                                  </li>
+                                  <li>
+                                    <Link
+                                      to={`${process.env.REACT_APP_PUBLIC_URL}/blog-details-left-sidebar`}
+                                    >
+                                      Blog Details Left Sidebar
+                                    </Link>
+                                  </li>
+                                  <li>
+                                    <Link
+                                      to={`${process.env.REACT_APP_PUBLIC_URL}/blog-details-right-sidebar`}
+                                    >
+                                      Blog Details Right Sidebar
+                                    </Link>
+                                  </li>
+                                </ul>
+                              </li> */}
+                            {/* endregion */}
                             <li>
                               <Link
                                 to={`${process.env.REACT_APP_PUBLIC_URL}/contact-us`}
