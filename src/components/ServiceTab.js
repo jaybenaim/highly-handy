@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { GiFamilyHouse, GiHighGrass, GiRake } from "react-icons/gi";
+import { Link } from "react-router-dom";
 import { Tab, TabList, TabPanel, Tabs } from "react-tabs";
 import { BASE_URL, SERVICES_PATHS } from "../consts";
 
@@ -65,12 +66,12 @@ class ServiceTabExample extends Component {
             <div className="service-tab__single-content">
               <h3 className="service-tab__title">{val.contentTitle}</h3>
               <p className="service-tab__text">{val.contentDesc}</p>
-              <a
-                href={`${BASE_URL}/${val.serviceLink}`}
+              <Link
+                to={`${BASE_URL}/services/${val.serviceLink}`}
                 className="see-more-link"
               >
                 SEE MORE
-              </a>
+              </Link>
             </div>
           </div>
         </TabPanel>

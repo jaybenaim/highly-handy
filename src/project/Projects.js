@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import BrandLogoSlider from "../components/BrandLogoSlider";
 import Footer from "../components/Footer";
 import MobileMenu from "../components/MobileMenu";
@@ -73,28 +74,32 @@ class Projects extends Component {
           <div className="service-grid-item service-grid-item--style2">
             <div className="service-grid-item__image">
               <div className="service-grid-item__image-wrapper">
-                <a href={`${process.env.REACT_APP_PUBLIC_URL}/${val.pageLink}`}>
+                <Link
+                  to={`${process.env.REACT_APP_PUBLIC_URL}/services/${val.pageLink}`}
+                >
                   <img
                     src={`/assets/img/projects/${val.img}`}
                     className="img-fluid"
                     alt=""
                   />
-                </a>
+                </Link>
               </div>
             </div>
             <div className="service-grid-item__content">
               <h3 className="title">
-                <a href={`${process.env.REACT_APP_PUBLIC_URL}/${val.pageLink}`}>
+                <Link
+                  to={`${process.env.REACT_APP_PUBLIC_URL}/services/${val.pageLink}`}
+                >
                   {val.projectTitle}
-                </a>
+                </Link>
               </h3>
               <p className="subtitle">{val.projectSubtitle}</p>
-              <a
-                href={`${process.env.REACT_APP_PUBLIC_URL}/${val.pageLink}`}
+              <Link
+                to={`${process.env.REACT_APP_PUBLIC_URL}/services/${val.pageLink}`}
                 className="see-more-link"
               >
                 SEE MORE
-              </a>
+              </Link>
             </div>
           </div>
         </div>

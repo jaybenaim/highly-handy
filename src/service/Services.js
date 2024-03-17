@@ -43,13 +43,13 @@ class Services extends Component {
           <div className="service-grid-item">
             <div className="service-grid-item__image">
               <div className="service-grid-item__image-wrapper">
-                <a href={`${BASE_URL}/${val.pageLink}`}>
+                <Link to={`${BASE_URL}/services/${val.pageLink}`}>
                   <img
                     src={`/assets/img/services/${val.img}`}
                     className="img-fluid"
                     alt="Service Grid"
                   />
-                </a>
+                </Link>
               </div>
               <div className="icon">
                 <val.icon size="3em" color="white" />
@@ -57,12 +57,17 @@ class Services extends Component {
             </div>
             <div className="service-grid-item__content">
               <h3 className="title">
-                <a href={`${BASE_URL}/${val.pageLink}`}>{val.serviceTitle}</a>
+                <Link to={`${BASE_URL}/services/${val.pageLink}`}>
+                  {val.serviceTitle}
+                </Link>
               </h3>
               <p className="subtitle">{val.serviceSubtitle}</p>
-              <a href={`${BASE_URL}/${val.pageLink}`} className="see-more-link">
+              <Link
+                to={`${BASE_URL}/services/${val.pageLink}`}
+                className="see-more-link"
+              >
                 SEE MORE
-              </a>
+              </Link>
             </div>
           </div>
         </div>

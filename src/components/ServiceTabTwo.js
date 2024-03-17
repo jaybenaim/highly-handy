@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import { Tab, TabList, TabPanel, Tabs } from "react-tabs";
 import { BASE_URL } from "../consts";
 class ServiceTabTwo extends Component {
@@ -71,12 +72,12 @@ class ServiceTabTwo extends Component {
             <div className="service-tab__single-content">
               <h3 className="service-tab__title">{val.contentTitle}</h3>
               <p className="service-tab__text">{val.contentDesc}</p>
-              <a
-                href={`${BASE_URL}/${val.serviceLink}`}
+              <Link
+                to={`${BASE_URL}/services/${val.serviceLink}`}
                 className="see-more-link"
               >
                 SEE MORE
-              </a>
+              </Link>
             </div>
           </div>
         </TabPanel>

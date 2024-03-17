@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { GiFamilyHouse, GiHighGrass, GiRake } from "react-icons/gi";
+import { Link } from "react-router-dom";
 import { BASE_URL, SERVICES, SERVICES_PATHS } from "../consts";
 import SwiperSlider, { SwiperSlide } from "./swiper";
 
@@ -60,13 +61,13 @@ class ServiceGridSlider extends Component {
             <div className="service-grid-item">
               <div className="service-grid-item__image">
                 <div className="service-grid-item__image-wrapper">
-                  <a href={`${BASE_URL}/services/${val.serviceUrl}`}>
+                  <Link to={`${BASE_URL}/services/${val.serviceUrl}`}>
                     <img
                       src={`/assets/img/services/${val.img}`}
                       className="img-fluid"
                       alt=""
                     />
-                  </a>
+                  </Link>
                 </div>
                 <div className="icon">
                   <val.icon size="3em" color="white" />
@@ -74,17 +75,17 @@ class ServiceGridSlider extends Component {
               </div>
               <div className="service-grid-item__content">
                 <h3 className="title">
-                  <a href={`${BASE_URL}/services/${val.serviceUrl}`}>
+                  <Link to={`${BASE_URL}/services/${val.serviceUrl}`}>
                     {val.serviceTitle}
-                  </a>
+                  </Link>
                 </h3>
                 <p className="subtitle">{val.serviceExcerpt}</p>
-                <a
-                  href={`${BASE_URL}/services/${val.serviceUrl}`}
+                <Link
+                  to={`${BASE_URL}/services/${val.serviceUrl}`}
                   className="see-more-link"
                 >
                   SEE MORE
-                </a>
+                </Link>
               </div>
             </div>
           </div>

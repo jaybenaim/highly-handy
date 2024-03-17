@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import SwiperSlider, { SwiperSlide } from "./swiper";
 
 class ServiceGridSlider extends Component {
@@ -58,32 +59,32 @@ class ServiceGridSlider extends Component {
           <div className="service-grid-item service-grid-item--style2">
             <div className="service-grid-item__image">
               <div className="service-grid-item__image-wrapper">
-                <a
-                  href={`${process.env.REACT_APP_PUBLIC_URL}/${val.serviceUrl}`}
+                <Link
+                  to={`${process.env.REACT_APP_PUBLIC_URL}/services/${val.serviceUrl}`}
                 >
                   <img
                     src={`/assets/img/service/${val.img}`}
                     className="img-fluid"
                     alt=""
                   />
-                </a>
+                </Link>
               </div>
             </div>
             <div className="service-grid-item__content">
               <h3 className="title">
-                <a
-                  href={`${process.env.REACT_APP_PUBLIC_URL}/${val.serviceUrl}`}
+                <Link
+                  to={`${process.env.REACT_APP_PUBLIC_URL}/services/${val.serviceUrl}`}
                 >
                   {val.serviceTitle}
-                </a>
+                </Link>
               </h3>
               <p className="subtitle">{val.serviceExcerpt}</p>
-              <a
-                href={`${process.env.REACT_APP_PUBLIC_URL}/${val.serviceUrl}`}
+              <Link
+                to={`${process.env.REACT_APP_PUBLIC_URL}/services/${val.serviceUrl}`}
                 className="see-more-link"
               >
                 SEE MORE
-              </a>
+              </Link>
             </div>
           </div>
         </SwiperSlide>
