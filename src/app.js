@@ -40,18 +40,18 @@ const App = () => {
             path="/service-details-right-sidebar"
             element={<ServiceDetailsRightSidebar />}
           />
-          <Route path="/projects" element={<Projects />} />
-          <Route path="/project-details" element={<ProjectDetails />} />
-          <Route path="/blog-left-sidebar" element={<BlogLeftSidebar />} />
-          <Route path="/blog-right-sidebar" element={<BlogRightSidebar />} />
-          <Route
+          {/* <Route path="/projects" element={<Projects />} /> */}
+          {/* <Route path="/project-details" element={<ProjectDetails />} /> */}
+          {/* <Route path="/blog-left-sidebar" element={<BlogLeftSidebar />} /> */}
+          {/* <Route path="/blog-right-sidebar" element={<BlogRightSidebar />} /> */}
+          {/* <Route
             path="/blog-details-left-sidebar"
             element={<BlogDetailsLeftSidebar />}
           />
           <Route
             path="/blog-details-right-sidebar"
             element={<BlogDetailsRightSidebar />}
-          />
+          /> */}
           <Route path="/contact-us" element={<Contact />} />
           <Route path="*" element={<NoMAtch />} />
         </Routes>

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { GiFamilyHouse, GiHighGrass, GiRake } from "react-icons/gi";
-import { BASE_URL, SERVICES_PATHS } from "../consts";
+import { BASE_URL, SERVICES, SERVICES_PATHS } from "../consts";
 import SwiperSlider, { SwiperSlide } from "./swiper";
 
 class ServiceGridSlider extends Component {
@@ -30,7 +30,7 @@ class ServiceGridSlider extends Component {
       {
         img: "aeration-370x247.png",
         icon: GiHighGrass,
-        serviceTitle: "Aeration",
+        serviceTitle: SERVICES.AERATION,
         serviceExcerpt:
           "Aeration opens up the grass in order for the grass seeds, topsoil, and fertilizer to penetrate the ground rather than have it sit on top.",
         serviceUrl: SERVICES_PATHS.AERATION,
@@ -38,15 +38,15 @@ class ServiceGridSlider extends Component {
       {
         img: "detatcher-370x247.jpg",
         icon: GiRake,
-        serviceTitle: "Dethatching",
+        serviceTitle: SERVICES.DETHATCHING,
         serviceExcerpt:
           "Dethatching is the first thing you need to do for your lawn to get the best results. It helps remove all the dead grass to allow water and sun to get an uninterrupted source of nutrients.",
         serviceUrl: SERVICES_PATHS.DETHATCHING,
       },
       {
-        img: "service1.jpg",
+        img: "window-cleaning-785x460.jpg",
         icon: GiFamilyHouse,
-        serviceTitle: "Window Cleaning",
+        serviceTitle: SERVICES.WINDOW_CLEANING,
         serviceExcerpt:
           "We have been cleaning windows for 10+ years and we have taken all our clients concerns and came up with a solution.",
         serviceUrl: SERVICES_PATHS.WINDOW_CLEANING,

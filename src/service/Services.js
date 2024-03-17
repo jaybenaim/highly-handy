@@ -1,59 +1,36 @@
 import React, { Component } from "react";
-import BrandLogoSlider from "../components/BrandLogoSlider";
+import { GiFamilyHouse, GiHighGrass, GiRake } from "react-icons/gi";
+import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
 import MobileMenu from "../components/MobileMenu";
 import NavBar from "../components/NavBar";
-import { BASE_URL } from "../consts";
+import { BASE_URL, SERVICES, SERVICES_PATHS } from "../consts";
 class Services extends Component {
   render() {
     let data = [
       {
-        pageLink: "service-details-left-sidebar",
-        img: "service1.jpg",
-        iconClass: "flaticon-002-welding",
-        serviceTitle: "Land Minning",
+        pageLink: SERVICES_PATHS.AERATION,
+        img: "aeration-370x247.png",
+        icon: GiHighGrass,
+        serviceTitle: SERVICES.AERATION,
         serviceSubtitle:
-          "Lorem ipsum dolor sit amet consect adipisi elit sed do eiusm tempor",
+          "Aeration opens up the grass in order for the grass seeds, topsoil, and fertilizer to penetrate the ground rather than have it sit on top.",
       },
       {
-        pageLink: "service-details-left-sidebar",
-        img: "service2.jpg",
-        iconClass: "flaticon-004-walkie-talkie",
-        serviceTitle: "Work Management",
+        pageLink: SERVICES_PATHS.DETHATCHING,
+        img: "detatcher-370x247.jpg",
+        icon: GiRake,
+        serviceTitle: SERVICES.DETHATCHING,
         serviceSubtitle:
-          "Lorem ipsum dolor sit amet consect adipisi elit sed do eiusm tempor",
+          "Dethatching is the first thing you need to do for your lawn to get the best results. It helps remove all the dead grass to allow water and sun to get an uninterrupted source of nutrients.",
       },
       {
-        pageLink: "service-details-left-sidebar",
-        img: "service3.jpg",
-        iconClass: "flaticon-015-cart",
-        serviceTitle: "Material Engineering",
+        pageLink: SERVICES_PATHS.WINDOW_CLEANING,
+        img: "window-cleaning-785x460.jpg",
+        icon: GiFamilyHouse,
+        serviceTitle: SERVICES.WINDOW_CLEANING,
         serviceSubtitle:
-          "Lorem ipsum dolor sit amet consect adipisi elit sed do eiusm tempor",
-      },
-      {
-        pageLink: "service-details-left-sidebar",
-        img: "service-3.jpg",
-        iconClass: "flaticon-010-tank-1",
-        serviceTitle: "Power and Energy",
-        serviceSubtitle:
-          "Lorem ipsum dolor sit amet consect adipisi elit sed do eiusm tempor",
-      },
-      {
-        pageLink: "service-details-left-sidebar",
-        img: "service-2.jpg",
-        iconClass: "flaticon-004-walkie-talkie",
-        serviceTitle: "Land Minning",
-        serviceSubtitle:
-          "Lorem ipsum dolor sit amet consect adipisi elit sed do eiusm tempor",
-      },
-      {
-        pageLink: "service-details-left-sidebar",
-        img: "service-1.jpg",
-        iconClass: "flaticon-002-welding",
-        serviceTitle: "Work Management",
-        serviceSubtitle:
-          "Lorem ipsum dolor sit amet consect adipisi elit sed do eiusm tempor",
+          "We have been cleaning windows for 10+ years and we have taken all our clients concerns and came up with a solution.",
       },
     ];
 
@@ -68,14 +45,14 @@ class Services extends Component {
               <div className="service-grid-item__image-wrapper">
                 <a href={`${BASE_URL}/${val.pageLink}`}>
                   <img
-                    src={`/assets/img/service/${val.img}`}
+                    src={`/assets/img/services/${val.img}`}
                     className="img-fluid"
                     alt="Service Grid"
                   />
                 </a>
               </div>
               <div className="icon">
-                <i className={val.iconClass} />
+                <val.icon size="3em" color="white" />
               </div>
             </div>
             <div className="service-grid-item__content">
@@ -102,17 +79,17 @@ class Services extends Component {
         <div
           className="breadcrumb-area breadcrumb-bg"
           style={{
-            backgroundImage: `url(/assets/img/backgrounds/funfact-bg.jpg)`,
+            backgroundImage: `url(/assets/img/services/grass-top-view.jpg)`,
           }}
         >
           <div className="container">
             <div className="row">
               <div className="col">
                 <div className="page-banner text-center">
-                  <h1>Service</h1>
+                  <h1>Services</h1>
                   <ul className="page-breadcrumb">
                     <li>
-                      <a href="/">Home</a>
+                      <Link to="/">Home</Link>
                     </li>
                     <li>Service</li>
                   </ul>
@@ -143,7 +120,7 @@ class Services extends Component {
         {/*====================  End of service page content  ====================*/}
 
         {/* Brand logo */}
-        <BrandLogoSlider background="grey-bg" />
+        {/* <BrandLogoSlider background="grey-bg" /> */}
 
         {/* Footer */}
         <Footer />
