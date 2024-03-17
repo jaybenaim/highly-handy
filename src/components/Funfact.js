@@ -15,8 +15,8 @@ class Funfact extends Component {
 
   render() {
     let data = [
-      { img: "funfact-project.png", countNum: 3496, countTitle: "Projects" },
-      { img: "funfact-clients.png", countNum: 3215, countTitle: "Clients" },
+      { img: "funfact-project.png", countNum: 4629, countTitle: "Projects" },
+      { img: "funfact-clients.png", countNum: 3218, countTitle: "Clients" },
     ];
 
     let DataList = data.map((val, i) => {
