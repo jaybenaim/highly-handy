@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import { BASE_URL, SERVICES_PATHS } from "../consts";
+import { BASE_URL, SERVICES, SERVICES_PATHS } from "../consts";
 import MobileMenu from "./MobileMenu";
 
 class NavBar extends Component {
@@ -168,21 +168,28 @@ class NavBar extends Component {
                                   <Link
                                     to={`${BASE_URL}/services/${SERVICES_PATHS.AERATION}`}
                                   >
-                                    Aeration
+                                    {SERVICES.AERATION}
                                   </Link>
                                 </li>
                                 <li>
                                   <Link
                                     to={`${BASE_URL}/services/${SERVICES_PATHS.DETHATCHING}`}
                                   >
-                                    Dethatching
+                                    {SERVICES.DETHATCHING}
                                   </Link>
                                 </li>
                                 <li>
                                   <Link
                                     to={`${BASE_URL}/services/${SERVICES_PATHS.WINDOW_CLEANING}`}
                                   >
-                                    Window Cleaning
+                                    {SERVICES.WINDOW_CLEANING}
+                                  </Link>
+                                </li>
+                                <li>
+                                  <Link
+                                    to={`${BASE_URL}/services/${SERVICES_PATHS.INTERLOCK_CLEANING}`}
+                                  >
+                                    {SERVICES.INTERLOCK_CLEANING}
                                   </Link>
                                 </li>
                               </ul>

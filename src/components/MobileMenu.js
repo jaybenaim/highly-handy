@@ -98,6 +98,13 @@ class MobileMenu extends Component {
                           {SERVICES.WINDOW_CLEANING}
                         </Link>
                       </li>
+                      <li>
+                        <Link
+                          to={`${BASE_URL}/services/${SERVICES_PATHS.INTERLOCK_CLEANING}`}
+                        >
+                          {SERVICES.INTERLOCK_CLEANING}
+                        </Link>
+                      </li>
                     </ul>
                   </li>
                   <li>

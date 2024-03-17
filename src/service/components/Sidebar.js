@@ -1,4 +1,5 @@
 import React from "react";
+import { BsBricks } from "react-icons/bs";
 import { GiFamilyHouse, GiHighGrass, GiRake } from "react-icons/gi";
 import { Link, useParams } from "react-router-dom";
 import { BASE_URL, SERVICES, SERVICES_PATHS } from "../../consts";
@@ -21,6 +22,11 @@ const Sidebar = () => {
       sidebarListLink: SERVICES_PATHS.WINDOW_CLEANING,
       sidebarListIcon: GiFamilyHouse,
       sidebarListText: SERVICES.WINDOW_CLEANING,
+    },
+    {
+      sidebarListLink: SERVICES_PATHS.INTERLOCK_CLEANING,
+      sidebarListIcon: BsBricks,
+      sidebarListText: SERVICES.INTERLOCK_CLEANING,
     },
   ];
 

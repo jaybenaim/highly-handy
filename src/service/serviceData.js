@@ -131,11 +131,11 @@ export const SERVICE_DATA = {
     ),
     imgs: [
       {
-        img: "detatcher-785x589.jpg",
+        img: "detatcher.jpg",
         alt: "Dethatching results with thatch on the grass",
       },
       {
-        img: "dethatching-785x524.jpg",
+        img: "dethatching.jpg",
         alt: "Dethatching results",
       },
     ],
@@ -234,10 +234,102 @@ export const SERVICE_DATA = {
         spotless, and gleaming with brilliance.
       </p>
     ),
-    // imgs: [
-    //   { img: "aeration-785x524.png", alt: "Steps for aeration" },
-    //   { img: "beforeAfter-785x524.jpg", alt: "Nice lawn after aeration" },
-    // ],
+    imgs: [
+      {
+        img: "window-cleaning-clean.jpg",
+        alt: "Clean windows after window cleaning",
+      },
+      {
+        img: "window-cleaning-dirty.jpg",
+        alt: "Dirty windows before window cleaning",
+      },
+    ],
+  },
+  [SERVICES.INTERLOCK_CLEANING]: {
+    title: SERVICES.INTERLOCK_CLEANING,
+    summary: (
+      <div>
+        <p>
+          Interlock cleaning offers numerous benefits for homeowners seeking to
+          enhance the appearance and longevity of their outdoor spaces. By
+          removing weeds, replacing sand, and sealing the surface.
+        </p>
+      </div>
+    ),
+    benefits: (
+      <div>
+        <h4>Weed Removal:</h4>
+        <p>
+          Interlock cleaning involves thorough weed removal from the
+          interlocking bricks, ensuring a clean and pristine appearance for your
+          outdoor space. By eliminating weeds, you prevent them from detracting
+          from the beauty of your interlock surface and reduce the need for
+          ongoing maintenance.
+        </p>
+
+        <h4>Sand Replacement:</h4>
+        <p>
+          As part of the interlock cleaning process, the old sand between the
+          interlocking bricks is removed and replaced with fresh, high-quality
+          joint sand. This helps to stabilize the bricks, prevent shifting, and
+          maintain the structural integrity of your outdoor surface.
+        </p>
+
+        <h4>Sealing:</h4>
+        <p>
+          After weed removal and sand replacement, the interlock surface is
+          sealed to provide long-lasting protection against weed growth,
+          moisture infiltration, and erosion. The sealant creates a protective
+          barrier that enhances the durability and appearance of your interlock,
+          ensuring it remains beautiful and resilient for years to come.
+        </p>
+
+        <h4>Enhanced Appearance:</h4>
+        <p>
+          Interlock cleaning revitalizes the appearance of your outdoor space,
+          restoring the original beauty and luster of your interlocking bricks.
+          With weeds removed, joints refilled, and a fresh sealant applied, your
+          interlock surface will look clean, uniform, and visually appealing.
+        </p>
+
+        <h4>Extended Lifespan:</h4>
+        <p>
+          By removing weeds, replacing sand, and sealing the interlock surface,
+          interlock cleaning helps to prolong the lifespan of your outdoor
+          hardscape. Proper maintenance and protection against weed growth and
+          erosion ensure that your interlocking bricks remain structurally sound
+          and aesthetically pleasing for many years.
+        </p>
+
+        <h4>Reduced Maintenance:</h4>
+        <p>
+          Interlock cleaning reduces the need for ongoing maintenance by
+          eliminating weeds and stabilizing the surface with fresh joint sand
+          and sealant. With fewer weeds and a sealed surface, you'll spend less
+          time and effort maintaining your outdoor space, allowing you to enjoy
+          it to the fullest.
+        </p>
+      </div>
+    ),
+    overview: (
+      <p>
+        Overall, interlock cleaning offers a cost-effective solution to enhance
+        the beauty, functionality, and longevity of your outdoor hardscape,
+        ensuring years of enjoyment and satisfaction.
+      </p>
+    ),
+    imgs: [
+      { img: "interlock.jpeg", alt: "Before picture of interlock with weeds" },
+      {
+        img: "interlock1.jpeg",
+        alt: "Interlock after cleaning without weeds and a fresh seal",
+      },
+      { img: "interlock2.jpeg", alt: "Before picture of interlock with weeds" },
+      {
+        img: "interlock3.jpeg",
+        alt: "Interlock after cleaning without weeds and a fresh seal",
+      },
+    ],
   },
 };
 
@@ -245,4 +337,5 @@ export const SERVICE_PATH_TO_SERVICE_MAP = {
   [SERVICES_PATHS.AERATION]: SERVICES.AERATION,
   [SERVICES_PATHS.DETHATCHING]: SERVICES.DETHATCHING,
   [SERVICES_PATHS.WINDOW_CLEANING]: SERVICES.WINDOW_CLEANING,
+  [SERVICES_PATHS.INTERLOCK_CLEANING]: SERVICES.INTERLOCK_CLEANING,
 };

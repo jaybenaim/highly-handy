@@ -16,14 +16,6 @@ class ServiceGallery extends Component {
     /* service image gallery data */
 
     let imageGalleryData = imgs;
-    // [
-    //   { img: "aeration-785x460.png" },
-    //   //   { img: "service-details-2.jpg" },
-    //   //   { img: "service-details-3.jpg" },
-    //   //   { img: "service-details-4.jpg" },
-    //   //   { img: "service-details-5.jpg" },
-    //   //   { img: "service-details-6.jpg" },
-    // ];
 
     /* service image gallery component */
 
@@ -33,7 +25,8 @@ class ServiceGallery extends Component {
           <div className="item">
             <img
               src={`/assets/img/services/${val.img}`}
-              className="img-fluid"
+              className="img-fluid object-fit-cover"
+              style={{ maxHeight: "410px", width: "100%" }}
               alt={val.alt}
             />
           </div>

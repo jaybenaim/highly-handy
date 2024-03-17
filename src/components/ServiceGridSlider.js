@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { BsBricks } from "react-icons/bs";
 import { GiFamilyHouse, GiHighGrass, GiRake } from "react-icons/gi";
 import { Link } from "react-router-dom";
 import { BASE_URL, SERVICES, SERVICES_PATHS } from "../consts";
@@ -52,6 +53,14 @@ class ServiceGridSlider extends Component {
           "We have been cleaning windows for 10+ years and we have taken all our clients concerns and came up with a solution.",
         serviceUrl: SERVICES_PATHS.WINDOW_CLEANING,
       },
+      {
+        img: "interlock.jpeg",
+        icon: BsBricks,
+        serviceTitle: SERVICES.INTERLOCK_CLEANING,
+        serviceExcerpt:
+          "Revitalize your outdoor space with our professional interlock cleaning service, removing weeds, replacing sand, and sealing for lasting beauty and durability.",
+        serviceUrl: SERVICES_PATHS.INTERLOCK_CLEANING,
+      },
     ];
 
     let DataList = data.map((val, i) => {
@@ -64,8 +73,9 @@ class ServiceGridSlider extends Component {
                   <Link to={`${BASE_URL}/services/${val.serviceUrl}`}>
                     <img
                       src={`/assets/img/services/${val.img}`}
-                      className="img-fluid"
-                      alt=""
+                      className="img-fluid object-fit-cover"
+                      style={{ maxHeight: "194px" }}
+                      alt={val.serviceTitle}
                     />
                   </Link>
                 </div>

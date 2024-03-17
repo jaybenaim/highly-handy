@@ -1,5 +1,5 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 import Footer from "../components/Footer";
 import MobileMenu from "../components/MobileMenu";
@@ -31,18 +31,16 @@ const ServiceDetailsLeftSidebar = () => {
           <div className="row">
             <div className="col">
               <div className="page-banner text-center">
-                <h1 className="text-capitalize">{service}</h1>
+                <h1 className="text-capitalize">{serviceData.title}</h1>
                 <ul className="page-breadcrumb">
                   <li>
-                    <a href="/">Home</a>
+                    <Link to="/">Home</Link>
                   </li>
                   <li>
-                    <a href={`${BASE_URL}/services`}>Services</a>
+                    <Link to={`${BASE_URL}/services`}>Services</Link>
                   </li>
                   <li>
-                    <span className="text-capitalize">
-                      {serviceData?.title}
-                    </span>
+                    <span className="text-capitalize">{serviceData.title}</span>
                   </li>
                 </ul>
               </div>
