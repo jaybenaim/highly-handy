@@ -1,10 +1,12 @@
 import React, { Component } from "react";
+import { BsBricks } from "react-icons/bs";
 import { GiFamilyHouse, GiHighGrass, GiRake } from "react-icons/gi";
 import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
 import MobileMenu from "../components/MobileMenu";
 import NavBar from "../components/NavBar";
 import { BASE_URL, SERVICES, SERVICES_PATHS } from "../consts";
+
 class Services extends Component {
   render() {
     let data = [
@@ -32,6 +34,14 @@ class Services extends Component {
         serviceSubtitle:
           "We have been cleaning windows for 10+ years and we have taken all our clients concerns and came up with a solution.",
       },
+      {
+        pageLink: SERVICES_PATHS.WINDOW_CLEANING,
+        img: "interlock-247x247.jpeg",
+        icon: BsBricks,
+        serviceTitle: SERVICES.INTERLOCK_CLEANING,
+        serviceSubtitle:
+          "Revitalize your outdoor area with our specialized interlock cleaning service, which includes meticulous weed removal. Our expert team ensures a pristine finish, leaving your space looking clean, fresh, and inviting.",
+      },
     ];
 
     let Datalist = data.map((val, i) => {
@@ -46,8 +56,9 @@ class Services extends Component {
                 <Link to={`${BASE_URL}/services/${val.pageLink}`}>
                   <img
                     src={`/assets/img/services/${val.img}`}
-                    className="img-fluid"
-                    alt="Service Grid"
+                    className="img-fluid object-fit-cover"
+                    style={{ maxHeight: "197px" }}
+                    alt={val.serviceTitle}
                   />
                 </Link>
               </div>

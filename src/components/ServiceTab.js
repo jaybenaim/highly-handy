@@ -1,19 +1,21 @@
 import React, { Component } from "react";
+import { BsBricks } from "react-icons/bs";
 import { GiFamilyHouse, GiHighGrass, GiRake } from "react-icons/gi";
 import { Link } from "react-router-dom";
 import { Tab, TabList, TabPanel, Tabs } from "react-tabs";
-import { BASE_URL, SERVICES_PATHS } from "../consts";
+import { BASE_URL, SERVICES, SERVICES_PATHS } from "../consts";
 
 class ServiceTabExample extends Component {
   render() {
     /* service tab menu */
     const serviceTabMenuData = [
-      { icon: GiHighGrass, tabMenuName: "Aeration" },
+      { icon: GiHighGrass, tabMenuName: SERVICES.AERATION },
       {
         icon: GiRake,
-        tabMenuName: "Dethatching",
+        tabMenuName: SERVICES.DETHATCHING,
       },
-      { icon: GiFamilyHouse, tabMenuName: "Window Cleaning" },
+      { icon: GiFamilyHouse, tabMenuName: SERVICES.WINDOW_CLEANING },
+      { icon: BsBricks, tabMenuName: SERVICES.INTERLOCK_CLEANING },
     ];
 
     const serviceTabMenuDatalist = serviceTabMenuData.map((val, i) => {
@@ -33,24 +35,31 @@ class ServiceTabExample extends Component {
     const serviceTabContentData = [
       {
         bgUrl: "aeration-785x460.png",
-        contentTitle: "Aeration",
+        contentTitle: SERVICES.AERATION,
         contentDesc:
           "Aeration opens up the grass in order for the grass seeds, topsoil, and fertilizer to penetrate the ground rather than have it sit on top.",
         serviceLink: SERVICES_PATHS.AERATION,
       },
       {
         bgUrl: "detatcher-785x460.jpg",
-        contentTitle: "Dethatching",
+        contentTitle: SERVICES.DETHATCHING,
         contentDesc:
           "Dethatching is the first thing you need to do for your lawn to get the best results. It helps remove all the dead grass to allow water and sun to get an uninterrupted source of nutrients.",
         serviceLink: SERVICES_PATHS.DETHATCHING,
       },
       {
         bgUrl: "window-cleaning-785x460.jpg",
-        contentTitle: "Window Cleaning",
+        contentTitle: SERVICES.WINDOW_CLEANING,
         contentDesc:
           "We have been cleaning windows for 10+ years and we have taken all our clients concerns and came up with a solution.",
         serviceLink: SERVICES_PATHS.WINDOW_CLEANING,
+      },
+      {
+        bgUrl: "interlock.jpeg",
+        contentTitle: SERVICES.INTERLOCK_CLEANING,
+        contentDesc:
+          "Revitalize your outdoor space with our professional interlock cleaning service, removing weeds, replacing sand, and sealing for lasting beauty and durability.",
+        serviceLink: SERVICES_PATHS.INTERLOCK_CLEANING,
       },
     ];
 
