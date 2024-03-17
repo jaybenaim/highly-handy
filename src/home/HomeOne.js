@@ -5,7 +5,6 @@ import HeroSliderOne from "../components/HeroSliderOne";
 import NavBar from "../components/NavBar";
 import ServiceGridSlider from "../components/ServiceGridSlider";
 import ServiceTab from "../components/ServiceTab";
-import TestimonialSlider from "../components/TestimonialSlider";
 
 class HomeOne extends Component {
   render() {
@@ -38,7 +37,7 @@ class HomeOne extends Component {
         <ServiceGridSlider />
 
         {/* Testimonial Slider */}
-        <TestimonialSlider />
+        {/* <TestimonialSlider /> */}
 
         {/* Brand logo */}
         {/* <BrandLogoSlider /> */}

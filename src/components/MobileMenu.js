@@ -63,27 +63,19 @@ class MobileMenu extends Component {
           </a>
           <div className="offcanvas-wrapper">
             <div className="offcanvas-inner-content">
-              <div className="offcanvas-mobile-search-area">
-                <form action="#">
-                  <input type="search" placeholder="Search ..." />
-                  <button type="submit">
-                    <i className="fa fa-search" />
-                  </button>
-                </form>
-              </div>
               <nav className="offcanvas-navigation" id="offcanvas-navigation">
                 <ul>
                   <li>
                     <Link to={`${BASE_URL}/`}>HOME</Link>
                   </li>
-                  <li>
+                  {/* <li>
                     <Link to={`${BASE_URL}/about-us`}>ABOUT</Link>
-                  </li>
+                  </li> */}
                   <li className="menu-item-has-children">
-                    <Link to={`${BASE_URL}/services`}>SERVICE</Link>
+                    <Link to={`${BASE_URL}/services`}>SERVICES</Link>
                     <ul className="sub-menu">
                       <li>
-                        <Link to={`${BASE_URL}/services`}>Service Page</Link>
+                        <Link to={`${BASE_URL}/services`}>Services</Link>
                       </li>
                       <li>
                         <Link
@@ -123,27 +115,21 @@ class MobileMenu extends Component {
                       </li>
                       <li>
                         <i className="ion-android-mail" />{" "}
-                        <a href="mailto:"></a>
+                        <a href="mailto:isaac_palomi@outlook.com">
+                          isaac_palomi@outlook.com
+                        </a>
                       </li>
                     </ul>
                   </div>
                 </div>
                 {/*Off Canvas Widget Social Start*/}
                 <div className="off-canvas-widget-social">
-                  <a href="#/" title="Facebook">
-                    <i className="fa fa-facebook" />
+                  <a href="https://www.facebook.com/highlyhandyLawnCare">
+                    <i className="zmdi zmdi-facebook" />
                   </a>
-                  <a href="#/" title="Twitter">
-                    <i className="fa fa-twitter" />
-                  </a>
-                  <a href="#/" title="LinkedIn">
-                    <i className="fa fa-linkedin" />
-                  </a>
-                  <a href="#/" title="Youtube">
-                    <i className="fa fa-youtube-play" />
-                  </a>
-                  <a href="#/" title="Vimeo">
-                    <i className="fa fa-vimeo-square" />
+
+                  <a href="https://www.instagram.com/highlyhandy_lawn_care_/">
+                    <i className="zmdi zmdi-instagram" />
                   </a>
                 </div>
                 {/*Off Canvas Widget Social End*/}

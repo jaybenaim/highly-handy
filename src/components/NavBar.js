@@ -179,9 +179,9 @@ class NavBar extends Component {
                                 </li>
                               </ul>
                             </li>
-                            <li>
+                            {/* <li>
                               <Link to={`${BASE_URL}/about-us`}>ABOUT</Link>
-                            </li>
+                            </li> */}
                             {/* region */}
                             {/* <li className="has-children has-children--multilevel-submenu">
                                 <Link

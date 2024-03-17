@@ -77,20 +77,31 @@ class About extends Component {
                 </div>
                 <div className="col-lg-6 col-12 mb-30">
                   <div className="about-content-two">
-                    <h3>Welcome to Castro</h3>
-                    <h1>50 Years of Experience in Industry</h1>
+                    <h3>Why Highly Handy? </h3>
+                    <h1>10 Years of Experience in Industry</h1>
                     <h4>
-                      We are ready to build your dream home Lorem ipsum dolor
-                      sit amet, consectetur adipisicing elit. Dolorum, beatae.
+                      With over a decade of experience, we specialize in
+                      comprehensive lawn care solutions tailored to diverse
+                      conditions. Having tended to numerous lawns, we are
+                      dedicated to extending our services to your property.
                     </h4>
                     <p>
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                      Ipsam repudiandae odit dolorum quis laudantium impedit
-                      beatae perferendis natus, hic libero sed atque quibusdam
-                      possimus error, voluptate est molestiae doloremque
-                      necessitatibus illum rerum sunt! Ad sunt obcaecati
-                      voluptatem sint sequi quos, qui non deleniti a
-                      praesentium, sapiente accusantium odit.
+                      Our approach includes empowering clients with
+                      cost-effective practices. We believe in simple lawn
+                      maintenance costs, such as fertilizer applications, which
+                      typically range from $30 to $100. Considering that a bag
+                      of fertilizer, covering approximately 8000 sqft, costs
+                      around $30, we strive to educate on these savings.
+                    </p>
+                    <p>
+                      Furthermore, our expertise extends to guiding you through
+                      any difficulties of lawn care, recommending suitable grass
+                      seeds, fertilizers, and topsoil options.
+                    </p>
+                    <p>
+                      At our core, we prioritize client convenience, working
+                      diligently to accommodate your schedule while minimizing
+                      disruptions during our service visits.
                     </p>
                     <a
                       href="services"
