@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { animateScroll as scroll } from "react-scroll";
+import { BASE_URL } from "../consts";
 class Footer extends Component {
   constructor(props) {
     super(props);
@@ -49,54 +50,45 @@ class Footer extends Component {
                       {/* footer intro wrapper */}
                       <div className="footer-intro-wrapper">
                         <div className="footer-logo">
-                          <a href={`${process.env.REACT_APP_PUBLIC_URL}/`}>
+                          <a href={`${BASE_URL}/`}>
                             <img
-                              src="assets/img/logo/logo.jpg"
+                              src="/assets/img/logo/logo.jpg"
                               className="img-fluid h-50 w-50"
                               alt=""
                             />
                           </a>
                         </div>
                         <div className="footer-desc">
-                          Lorem ipsum dolor sit amet consect adipisici elit, sed
-                          do eiusmod tempor incididuk ut labore et dolore magna
-                          aliqua Ut enim
+                          With over a decade of experience, we specialize in
+                          comprehensive lawn care solutions tailored to diverse
+                          conditions. Having tended to numerous lawns, we are
+                          dedicated to extending our services to your property.
                         </div>
                       </div>
                     </div>
-                    <div className="col-xl-2 offset-xl-1 col-lg-3 col-md-4">
+                    <div className="col-xl-2 offset-xl-1 col-lg-4 col-md-4">
                       {/* footer widget */}
                       <div className="footer-widget">
                         <h4 className="footer-widget__title">USEFUL LINKS</h4>
                         <ul className="footer-widget__navigation">
                           <li>
-                            <a href={`${process.env.REACT_APP_PUBLIC_URL}/`}>
-                              Home
-                            </a>
+                            <a href={`${BASE_URL}/`}>Home</a>
                           </li>
                           <li>
-                            <a
-                              href={`${process.env.REACT_APP_PUBLIC_URL}/services`}
-                            >
-                              Services
-                            </a>
+                            <a href={`${BASE_URL}/services`}>Services</a>
                           </li>
                           <li>
-                            <a
-                              href={`${process.env.REACT_APP_PUBLIC_URL}/contact-us`}
-                            >
-                              Contact Us
-                            </a>
+                            <a href={`${BASE_URL}/contact-us`}>Contact Us</a>
                           </li>
                         </ul>
                       </div>
                     </div>
-                    <div className="col-xl-2 offset-xl-1 col-lg-4 col-md-4">
+                    <div className="col-lg-4 offset-xl-1 col-md-4">
                       {/* footer widget */}
                       <div className="footer-widget mb-0">
                         <h4 className="footer-widget__title">CONTACT US</h4>
                         <div className="footer-widget__content">
-                          <p className="address">Vaughan, ON</p>
+                          <p className="address mb-0">Vaughan, ON</p>
                           <ul className="contact-details">
                             <li>
                               <span>P:</span>{" "}

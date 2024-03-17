@@ -36,7 +36,7 @@ class BlogGridTwo extends Component {
             <div className="blog-post-slider__image section-space--bottom--30">
               <a href={`${process.env.REACT_APP_PUBLIC_URL}/${val.link}`}>
                 <img
-                  src={`assets/img/blog/${val.img}`}
+                  src={`/assets/img/blog/${val.img}`}
                   className="img-fluid"
                   alt=""
                 />

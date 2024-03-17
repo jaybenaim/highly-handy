@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import { BASE_URL, SERVICES, SERVICES_PATHS } from "../consts";
 
 class MobileMenu extends Component {
   state = {
@@ -72,129 +73,43 @@ class MobileMenu extends Component {
               </div>
               <nav className="offcanvas-navigation" id="offcanvas-navigation">
                 <ul>
+                  <li>
+                    <Link to={`${BASE_URL}/`}>HOME</Link>
+                  </li>
+                  <li>
+                    <Link to={`${BASE_URL}/about-us`}>ABOUT</Link>
+                  </li>
                   <li className="menu-item-has-children">
-                    <Link to={`${process.env.REACT_APP_PUBLIC_URL}/home-one`}>
-                      HOME
-                    </Link>
+                    <Link to={`${BASE_URL}/services`}>SERVICE</Link>
                     <ul className="sub-menu">
                       <li>
+                        <Link to={`${BASE_URL}/services`}>Service Page</Link>
+                      </li>
+                      <li>
                         <Link
-                          to={`${process.env.REACT_APP_PUBLIC_URL}/home-one`}
+                          to={`${BASE_URL}/services/${SERVICES_PATHS.AERATION}`}
                         >
-                          Homepage One
+                          {SERVICES.AERATION}
                         </Link>
                       </li>
                       <li>
                         <Link
-                          to={`${process.env.REACT_APP_PUBLIC_URL}/home-two`}
+                          to={`${BASE_URL}/services/${SERVICES_PATHS.DETHATCHING}`}
                         >
-                          Homepage Two
+                          {SERVICES.DETHATCHING}
                         </Link>
                       </li>
                       <li>
                         <Link
-                          to={`${process.env.REACT_APP_PUBLIC_URL}/home-three`}
+                          to={`${BASE_URL}/services/${SERVICES_PATHS.WINDOW_CLEANING}`}
                         >
-                          Homepage Three
+                          {SERVICES.WINDOW_CLEANING}
                         </Link>
                       </li>
                     </ul>
                   </li>
                   <li>
-                    <Link to={`${process.env.REACT_APP_PUBLIC_URL}/about-us`}>
-                      ABOUT
-                    </Link>
-                  </li>
-                  <li className="menu-item-has-children">
-                    <Link to={`${process.env.REACT_APP_PUBLIC_URL}/services`}>
-                      SERVICE
-                    </Link>
-                    <ul className="sub-menu">
-                      <li>
-                        <Link
-                          to={`${process.env.REACT_APP_PUBLIC_URL}/services`}
-                        >
-                          Service Page
-                        </Link>
-                      </li>
-                      <li>
-                        <Link
-                          to={`${process.env.REACT_APP_PUBLIC_URL}/service-details-left-sidebar`}
-                        >
-                          Service Details Left Sidebar
-                        </Link>
-                      </li>
-                      <li>
-                        <Link
-                          to={`${process.env.REACT_APP_PUBLIC_URL}/service-details-right-sidebar`}
-                        >
-                          Service Details Right Sidebar
-                        </Link>
-                      </li>
-                    </ul>
-                  </li>
-                  <li className="menu-item-has-children">
-                    <Link to={`${process.env.REACT_APP_PUBLIC_URL}/projects`}>
-                      PROJECT
-                    </Link>
-                    <ul className="sub-menu">
-                      <li>
-                        <Link
-                          to={`${process.env.REACT_APP_PUBLIC_URL}/projects`}
-                        >
-                          Project Page
-                        </Link>
-                      </li>
-                      <li>
-                        <Link
-                          to={`${process.env.REACT_APP_PUBLIC_URL}/project-details`}
-                        >
-                          Project Details
-                        </Link>
-                      </li>
-                    </ul>
-                  </li>
-                  <li className="menu-item-has-children">
-                    <Link
-                      to={`${process.env.REACT_APP_PUBLIC_URL}/blog-left-sidebar`}
-                    >
-                      BLOG
-                    </Link>
-                    <ul className="sub-menu">
-                      <li>
-                        <Link
-                          to={`${process.env.REACT_APP_PUBLIC_URL}/blog-left-sidebar`}
-                        >
-                          Blog Left Sidebar
-                        </Link>
-                      </li>
-                      <li>
-                        <Link
-                          to={`${process.env.REACT_APP_PUBLIC_URL}/blog-right-sidebar`}
-                        >
-                          Blog Right Sidebar
-                        </Link>
-                      </li>
-                      <li>
-                        <Link
-                          to={`${process.env.REACT_APP_PUBLIC_URL}/blog-details-left-sidebar`}
-                        >
-                          Blog Details Left Sidebar
-                        </Link>
-                      </li>
-                      <li>
-                        <Link
-                          to={`${process.env.REACT_APP_PUBLIC_URL}/blog-details-right-sidebar`}
-                        >
-                          Blog Details Right Sidebar
-                        </Link>
-                      </li>
-                    </ul>
-                  </li>
-                  <li>
-                    <Link to={`${process.env.REACT_APP_PUBLIC_URL}/contact-us`}>
-                      CONTACT
-                    </Link>{" "}
+                    <Link to={`${BASE_URL}/contact-us`}>CONTACT</Link>{" "}
                   </li>
                 </ul>
               </nav>
@@ -204,13 +119,11 @@ class MobileMenu extends Component {
                     <ul className="header-contact-info__list">
                       <li>
                         <i className="ion-android-phone-portrait" />{" "}
-                        <a href="tel://12452456012">(1245) 2456 012 </a>
+                        <a href="tel:6472295873">(647) 229 5873 </a>
                       </li>
                       <li>
                         <i className="ion-android-mail" />{" "}
-                        <a href="mailto:info@yourdomain.com">
-                          info@yourdomain.com
-                        </a>
+                        <a href="mailto:"></a>
                       </li>
                     </ul>
                   </div>

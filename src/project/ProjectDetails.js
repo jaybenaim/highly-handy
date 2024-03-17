@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import NavBar from "../components/NavBar";
 import BrandLogoSlider from "../components/BrandLogoSlider";
 import Footer from "../components/Footer";
 import MobileMenu from "../components/MobileMenu";
+import NavBar from "../components/NavBar";
 import PhotoGallery from "./components/PhotoGallery";
 class Projects extends Component {
   render() {
@@ -16,7 +16,7 @@ class Projects extends Component {
         <div
           className="breadcrumb-area breadcrumb-bg"
           style={{
-            backgroundImage: `url(assets/img/backgrounds/funfact-bg.jpg)`
+            backgroundImage: `url(/assets/img/backgrounds/funfact-bg.jpg)`,
           }}
         >
           <div className="container">
@@ -49,7 +49,7 @@ class Projects extends Component {
                 <div className="col-12 section-space--bottom--40">
                   <div className="project-image">
                     <img
-                      src="assets/img/projects/project-details.jpg"
+                      src="/assets/img/projects/project-details.jpg"
                       className="img-fluid"
                       alt=""
                     />

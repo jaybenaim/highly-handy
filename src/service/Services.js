@@ -3,6 +3,7 @@ import BrandLogoSlider from "../components/BrandLogoSlider";
 import Footer from "../components/Footer";
 import MobileMenu from "../components/MobileMenu";
 import NavBar from "../components/NavBar";
+import { BASE_URL } from "../consts";
 class Services extends Component {
   render() {
     let data = [
@@ -65,9 +66,9 @@ class Services extends Component {
           <div className="service-grid-item">
             <div className="service-grid-item__image">
               <div className="service-grid-item__image-wrapper">
-                <a href={`${process.env.REACT_APP_PUBLIC_URL}/${val.pageLink}`}>
+                <a href={`${BASE_URL}/${val.pageLink}`}>
                   <img
-                    src={`assets/img/service/${val.img}`}
+                    src={`/assets/img/service/${val.img}`}
                     className="img-fluid"
                     alt="Service Grid"
                   />
@@ -79,15 +80,10 @@ class Services extends Component {
             </div>
             <div className="service-grid-item__content">
               <h3 className="title">
-                <a href={`${process.env.REACT_APP_PUBLIC_URL}/${val.pageLink}`}>
-                  {val.serviceTitle}
-                </a>
+                <a href={`${BASE_URL}/${val.pageLink}`}>{val.serviceTitle}</a>
               </h3>
               <p className="subtitle">{val.serviceSubtitle}</p>
-              <a
-                href={`${process.env.REACT_APP_PUBLIC_URL}/${val.pageLink}`}
-                className="see-more-link"
-              >
+              <a href={`${BASE_URL}/${val.pageLink}`} className="see-more-link">
                 SEE MORE
               </a>
             </div>
@@ -106,7 +102,7 @@ class Services extends Component {
         <div
           className="breadcrumb-area breadcrumb-bg"
           style={{
-            backgroundImage: `url(assets/img/backgrounds/funfact-bg.jpg)`,
+            backgroundImage: `url(/assets/img/backgrounds/funfact-bg.jpg)`,
           }}
         >
           <div className="container">

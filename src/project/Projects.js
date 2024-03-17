@@ -75,7 +75,7 @@ class Projects extends Component {
               <div className="service-grid-item__image-wrapper">
                 <a href={`${process.env.REACT_APP_PUBLIC_URL}/${val.pageLink}`}>
                   <img
-                    src={`assets/img/projects/${val.img}`}
+                    src={`/assets/img/projects/${val.img}`}
                     className="img-fluid"
                     alt=""
                   />
@@ -111,7 +111,7 @@ class Projects extends Component {
         <div
           className="breadcrumb-area breadcrumb-bg"
           style={{
-            backgroundImage: `url(assets/img/backgrounds/funfact-bg.jpg)`,
+            backgroundImage: `url(/assets/img/backgrounds/funfact-bg.jpg)`,
           }}
         >
           <div className="container">

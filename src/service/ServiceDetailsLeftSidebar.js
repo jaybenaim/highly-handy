@@ -1,139 +1,107 @@
-import React, { Component } from "react";
-import BrandLogoSlider from "../components/BrandLogoSlider";
+import React from "react";
+import { useParams } from "react-router-dom";
+
 import Footer from "../components/Footer";
 import MobileMenu from "../components/MobileMenu";
 import NavBar from "../components/NavBar";
+import { BASE_URL } from "../consts";
 import ServiceGallery from "./components/ServiceGallery";
 import Sidebar from "./components/Sidebar";
-class ServiceDetailsLeftSidebar extends Component {
-  render() {
-    return (
-      <div>
-        {/* Navigation bar */}
-        <NavBar />
+import { SERVICE_DATA, SERVICE_PATH_TO_SERVICE_MAP } from "./serviceData";
 
-        {/* breadcrumb */}
-        {/*====================  breadcrumb area ====================*/}
-        <div
-          className="breadcrumb-area breadcrumb-bg"
-          style={{
-            backgroundImage: `url(assets/img/backgrounds/funfact-bg.jpg)`,
-          }}
-        >
-          <div className="container">
-            <div className="row">
-              <div className="col">
-                <div className="page-banner text-center">
-                  <h1>Service Details</h1>
-                  <ul className="page-breadcrumb">
-                    <li>
-                      <a href="/">Home</a>
-                    </li>
-                    <li>
-                      <a href={`${process.env.REACT_APP_PUBLIC_URL}/services`}>
-                        Services
-                      </a>
-                    </li>
-                    <li>Service Details</li>
-                  </ul>
-                </div>
+const ServiceDetailsLeftSidebar = () => {
+  const { service } = useParams();
+
+  const serviceData = SERVICE_DATA[SERVICE_PATH_TO_SERVICE_MAP[service]];
+
+  return (
+    <div>
+      {/* Navigation bar */}
+      <NavBar />
+
+      {/* breadcrumb */}
+      {/*====================  breadcrumb area ====================*/}
+      <div
+        className="breadcrumb-area breadcrumb-bg"
+        style={{
+          backgroundImage: `url(/assets/img/services/grass-top-view.jpg)`,
+        }}
+      >
+        <div className="container">
+          <div className="row">
+            <div className="col">
+              <div className="page-banner text-center">
+                <h1 className="text-capitalize">{service}</h1>
+                <ul className="page-breadcrumb">
+                  <li>
+                    <a href="/">Home</a>
+                  </li>
+                  <li>
+                    <a href={`${BASE_URL}/services`}>Services</a>
+                  </li>
+                  <li>
+                    <span className="text-capitalize">
+                      {serviceData?.title}
+                    </span>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
         </div>
-        {/*====================  End of breadcrumb area  ====================*/}
+      </div>
+      {/*====================  End of breadcrumb area  ====================*/}
 
-        <div className="page-wrapper section-space--inner--120">
-          {/*Service section start*/}
-          <div className="service-section">
-            <div className="container">
-              <div className="row">
-                <div className="col-lg-8 col-12 order-1 order-lg-2">
-                  <div className="service-details">
-                    {/* service gallery */}
-                    <ServiceGallery />
+      <div className="page-wrapper section-space--inner--120">
+        {/*Service section start*/}
+        <div className="service-section">
+          <div className="container">
+            <div className="row">
+              <div className="col-lg-8 col-12 order-1 order-lg-2">
+                <div className="service-details">
+                  {/* service gallery */}
+                  {serviceData.imgs && (
+                    <ServiceGallery imgs={serviceData.imgs} />
+                  )}
 
-                    <div className="content section-space--top--30">
-                      <div className="row">
-                        <div className="col-12">
-                          <h2>Construction</h2>
-                          <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing
-                            elit. Ratione, sunt perspiciatis error id ipsa atque
-                            unde quis dolore nobis eum aperiam enim blanditiis
-                            pariatur inventore eius commodi consectetur ut.
-                            Totam, assumenda! Laboriosam possimus, corporis
-                            dicta!
-                          </p>
-                          <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing
-                            elit. Asperiores aliquid quod, officiis unde nostrum
-                            itaque! Adipisci dolorum, ab dolor, exercitationem
-                            praesentium dolorem quo voluptatum itaque
-                            dignissimos, sit esse cupiditate. Doloremque rerum
-                            similique a nobis placeat in illum, quo quaerat, ut
-                            repellat, fuga itaque? Nihil mollitia nisi, nam,
-                            accusantium nemo consequuntur reiciendis autem dicta
-                            consequatur earum beatae dolor distinctio, debitis
-                            repudiandae?
-                          </p>
-                        </div>
-                        <div className="col-lg-6 col-12 section-space--top--30">
-                          <h3>Project Analysis</h3>
-                          <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing
-                            elit. Fugiat, animi? Vel quas in minima qui totam,
-                            aliquid dolores quaerat voluptatum?
-                          </p>
-                        </div>
-                        <div className="col-lg-6 col-12 section-space--top--30">
-                          <h3>Project Costing</h3>
-                          <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing
-                            elit. Fugiat, animi? Vel quas in minima qui totam,
-                            aliquid dolores quaerat voluptatum?
-                          </p>
-                        </div>
-                        <div className="col-lg-6 col-12 section-space--top--30">
-                          <h3>Project Planning</h3>
-                          <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing
-                            elit. Fugiat, animi? Vel quas in minima qui totam,
-                            aliquid dolores quaerat voluptatum?
-                          </p>
-                        </div>
-                        <div className="col-lg-6 col-12 section-space--top--30">
-                          <h3>Project Strategy</h3>
-                          <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing
-                            elit. Fugiat, animi? Vel quas in minima qui totam,
-                            aliquid dolores quaerat voluptatum?
-                          </p>
-                        </div>
+                  <div className="content section-space--top--30">
+                    <div className="row">
+                      <div className="col-12">
+                        <h2>{serviceData?.title}</h2>
+                        {serviceData?.summary}
+                      </div>
+                      <div className="col-lg-6 col-12 section-space--top--30">
+                        <h3>Benefits</h3>
+                        {serviceData?.benefits}
+                      </div>
+
+                      <div className="col-lg-6 col-12 section-space--top--30">
+                        <h3>Overview</h3>
+                        {serviceData?.overview}
                       </div>
                     </div>
                   </div>
                 </div>
-                <div className="col-lg-4 col-12 order-2 order-lg-1">
-                  <Sidebar />
-                </div>
+              </div>
+              <div className="col-lg-4 col-12 order-2 order-lg-1">
+                <Sidebar />
               </div>
             </div>
           </div>
-          {/*Service section end*/}
         </div>
-
-        {/* Brand logo */}
-        <BrandLogoSlider background="grey-bg" />
-
-        {/* Footer */}
-        <Footer />
-
-        {/* Mobile Menu */}
-        <MobileMenu />
+        {/*Service section end*/}
       </div>
-    );
-  }
-}
+
+      {/* Brand logo */}
+      {/* <BrandLogoSlider background="grey-bg" /> */}
+
+      {/* Footer */}
+      <Footer />
+
+      {/* Mobile Menu */}
+      <MobileMenu />
+    </div>
+  );
+};
 
 export default ServiceDetailsLeftSidebar;

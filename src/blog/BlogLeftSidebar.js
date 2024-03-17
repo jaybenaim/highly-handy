@@ -1,10 +1,10 @@
 import React, { Component } from "react";
-import NavBar from "../components/NavBar";
-import Sidebar from "./components/Sidebar";
-import BlogPostGrid from "./components/BlogPostGrid";
 import BrandLogoSlider from "../components/BrandLogoSlider";
 import Footer from "../components/Footer";
 import MobileMenu from "../components/MobileMenu";
+import NavBar from "../components/NavBar";
+import BlogPostGrid from "./components/BlogPostGrid";
+import Sidebar from "./components/Sidebar";
 class BlogLeftSidebar extends Component {
   render() {
     return (
@@ -17,7 +17,7 @@ class BlogLeftSidebar extends Component {
         <div
           className="breadcrumb-area breadcrumb-bg"
           style={{
-            backgroundImage: `url(assets/img/backgrounds/funfact-bg.jpg)`
+            backgroundImage: `url(/assets/img/backgrounds/funfact-bg.jpg)`,
           }}
         >
           <div className="container">

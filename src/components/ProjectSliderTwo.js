@@ -62,7 +62,7 @@ class ServiceGridSlider extends Component {
                   href={`${process.env.REACT_APP_PUBLIC_URL}/${val.serviceUrl}`}
                 >
                   <img
-                    src={`assets/img/service/${val.img}`}
+                    src={`/assets/img/service/${val.img}`}
                     className="img-fluid"
                     alt=""
                   />

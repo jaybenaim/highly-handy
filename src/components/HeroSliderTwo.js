@@ -44,7 +44,7 @@ class HeroSliderTwo extends Component {
         <SwiperSlide key={i}>
           <div
             className="hero-slider__single-item"
-            style={{ backgroundImage: `url(assets/img/slider/${val.bgImg})` }}
+            style={{ backgroundImage: `url(/assets/img/slider/${val.bgImg})` }}
           >
             <div className="hero-slider__content-wrapper">
               <div className="container">

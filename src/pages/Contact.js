@@ -19,7 +19,7 @@ class Contact extends Component {
         <div
           className="breadcrumb-area breadcrumb-bg"
           style={{
-            backgroundImage: `url(assets/img/services/grass-top-view.jpg)`,
+            backgroundImage: `url(/assets/img/services/grass-top-view.jpg)`,
           }}
         >
           <div className="container">

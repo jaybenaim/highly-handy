@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { BASE_URL } from "../../consts";
 
 class Sidebar extends Component {
   render() {
@@ -17,7 +18,7 @@ class Sidebar extends Component {
     let categoryDataList = categoryData.map((val, i) => {
       return (
         <li key={i}>
-          <a href={`${process.env.REACT_APP_PUBLIC_URL}/${val.categoryLink}`}>
+          <a href={`${BASE_URL}/services/${val.categoryLink}`}>
             {val.categoryName}
           </a>
         </li>
@@ -51,11 +52,11 @@ class Sidebar extends Component {
       return (
         <div className="sidebar-blog" key={i}>
           <a href="blog-details-left-sidebar.html" className="image">
-            <img src={`assets/img/blog/${val.postImage}`} alt="" />
+            <img src={`/assets/img/blog/${val.postImage}`} alt="" />
           </a>
           <div className="content">
             <h5>
-              <a href={`${process.env.REACT_APP_PUBLIC_URL}/${val.postLink}`}>
+              <a href={`${BASE_URL}/services/${val.postLink}`}>
                 What are Groundworkers and what do they do?
               </a>
             </h5>
@@ -80,9 +81,7 @@ class Sidebar extends Component {
     let tagDataList = tagData.map((val, i) => {
       return (
         <li key={i}>
-          <a href={`${process.env.REACT_APP_PUBLIC_URL}/${val.tagLink}`}>
-            {val.tagName}
-          </a>
+          <a href={`${BASE_URL}/services/${val.tagLink}`}>{val.tagName}</a>
         </li>
       );
     });

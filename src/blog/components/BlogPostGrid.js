@@ -60,7 +60,7 @@ class BlogPostGrid extends Component {
             <div className="blog-post-slider__image section-space--bottom--30">
               <a href={`${process.env.REACT_APP_PUBLIC_URL}/${val.postLink}`}>
                 <img
-                  src={`assets/img/blog/${val.postImg}`}
+                  src={`/assets/img/blog/${val.postImg}`}
                   className="img-fluid"
                   alt=""
                 />

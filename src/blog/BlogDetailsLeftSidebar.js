@@ -3,6 +3,7 @@ import BrandLogoSlider from "../components/BrandLogoSlider";
 import Footer from "../components/Footer";
 import MobileMenu from "../components/MobileMenu";
 import NavBar from "../components/NavBar";
+import { BASE_URL } from "../consts";
 import BlogPostContent from "./components/BlogPostContent";
 import Sidebar from "./components/Sidebar";
 class BlogDetailsLeftSidebar extends Component {
@@ -17,7 +18,7 @@ class BlogDetailsLeftSidebar extends Component {
         <div
           className="breadcrumb-area breadcrumb-bg"
           style={{
-            backgroundImage: `url(assets/img/backgrounds/funfact-bg.jpg)`,
+            backgroundImage: `url(/assets/img/backgrounds/funfact-bg.jpg)`,
           }}
         >
           <div className="container">
@@ -30,11 +31,7 @@ class BlogDetailsLeftSidebar extends Component {
                       <a href="/">Home</a>
                     </li>
                     <li>
-                      <a
-                        href={`${process.env.REACT_APP_PUBLIC_URL}/blog-left-sidebar`}
-                      >
-                        Blog
-                      </a>
+                      <a href={`${BASE_URL}/blog-left-sidebar`}>Blog</a>
                     </li>
                     <li>Blog Details</li>
                   </ul>

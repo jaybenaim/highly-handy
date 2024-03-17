@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Tab, TabList, TabPanel, Tabs } from "react-tabs";
+import { BASE_URL } from "../consts";
 class ServiceTabTwo extends Component {
   render() {
     /* service tab menu */
@@ -64,14 +65,14 @@ class ServiceTabTwo extends Component {
           <div
             className="service-tab__single-content-wrapper"
             style={{
-              backgroundImage: `url(assets/img/backgrounds/${val.bgUrl})`,
+              backgroundImage: `url(/assets/img/backgrounds/${val.bgUrl})`,
             }}
           >
             <div className="service-tab__single-content">
               <h3 className="service-tab__title">{val.contentTitle}</h3>
               <p className="service-tab__text">{val.contentDesc}</p>
               <a
-                href={`${process.env.REACT_APP_PUBLIC_URL}/${val.serviceLink}`}
+                href={`${BASE_URL}/${val.serviceLink}`}
                 className="see-more-link"
               >
                 SEE MORE

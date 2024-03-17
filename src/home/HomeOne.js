@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import BlogGrid from "../components/BlogGrid";
 import Footer from "../components/Footer";
 import Funfact from "../components/Funfact";
 import HeroSliderOne from "../components/HeroSliderOne";
@@ -33,13 +32,13 @@ class HomeOne extends Component {
         {/* Team job */}
         {/* <TeamJob /> */}
         {/* Blog grid */}
-        <BlogGrid background="grey-bg" />
-
-        {/* Testimonial Slider */}
-        <TestimonialSlider />
+        {/* <BlogGrid background="grey-bg" /> */}
 
         {/* Service grid slider */}
         <ServiceGridSlider />
+
+        {/* Testimonial Slider */}
+        <TestimonialSlider />
 
         {/* Brand logo */}
         {/* <BrandLogoSlider /> */}

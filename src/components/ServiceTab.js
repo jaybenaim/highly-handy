@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { GiFamilyHouse, GiHighGrass, GiRake } from "react-icons/gi";
 import { Tab, TabList, TabPanel, Tabs } from "react-tabs";
+import { BASE_URL, SERVICES_PATHS } from "../consts";
 
 class ServiceTabExample extends Component {
   render() {
@@ -34,21 +35,21 @@ class ServiceTabExample extends Component {
         contentTitle: "Aeration",
         contentDesc:
           "Aeration opens up the grass in order for the grass seeds, topsoil, and fertilizer to penetrate the ground rather than have it sit on top.",
-        serviceLink: "aeration",
+        serviceLink: SERVICES_PATHS.AERATION,
       },
       {
         bgUrl: "detatcher-785x460.jpg",
         contentTitle: "Dethatching",
         contentDesc:
           "Dethatching is the first thing you need to do for your lawn to get the best results. It helps remove all the dead grass to allow water and sun to get an uninterrupted source of nutrients.",
-        serviceLink: "dethatching",
+        serviceLink: SERVICES_PATHS.DETHATCHING,
       },
       {
-        bgUrl: "service-tab1.png",
+        bgUrl: "window-cleaning-785x460.jpg",
         contentTitle: "Window Cleaning",
         contentDesc:
           "We have been cleaning windows for 10+ years and we have taken all our clients concerns and came up with a solution.",
-        serviceLink: "window-cleaning",
+        serviceLink: SERVICES_PATHS.WINDOW_CLEANING,
       },
     ];
 
@@ -58,14 +59,14 @@ class ServiceTabExample extends Component {
           <div
             className="service-tab__single-content-wrapper"
             style={{
-              backgroundImage: `url(assets/img/services/${val.bgUrl})`,
+              backgroundImage: `url(/assets/img/services/${val.bgUrl})`,
             }}
           >
             <div className="service-tab__single-content">
               <h3 className="service-tab__title">{val.contentTitle}</h3>
               <p className="service-tab__text">{val.contentDesc}</p>
               <a
-                href={`${process.env.REACT_APP_PUBLIC_URL}/${val.serviceLink}`}
+                href={`${BASE_URL}/${val.serviceLink}`}
                 className="see-more-link"
               >
                 SEE MORE

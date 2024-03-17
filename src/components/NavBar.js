@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import { BASE_URL, SERVICES_PATHS } from "../consts";
 import MobileMenu from "./MobileMenu";
 
 class NavBar extends Component {
@@ -75,7 +76,7 @@ class NavBar extends Component {
                     {/* top bar right */}
                     <div className="top-bar-right-wrapper">
                       <a
-                        href={`${process.env.REACT_APP_PUBLIC_URL}/contact-us`}
+                        href={`${BASE_URL}/contact-us`}
                         className="ht-btn ht-btn--default d-inline-block"
                       >
                         GET A QUOTE
@@ -94,9 +95,9 @@ class NavBar extends Component {
                     <div className="header-info-wrapper align-items-center">
                       {/* logo */}
                       <div className="logo">
-                        <Link to={`${process.env.REACT_APP_PUBLIC_URL}/`}>
+                        <Link to={`${BASE_URL}/`}>
                           <img
-                            src="assets/img/logo/logo.png"
+                            src="/assets/img/logo/logo.png"
                             className="img-fluid w-50"
                             alt="Logo"
                           />
@@ -145,42 +146,33 @@ class NavBar extends Component {
                         <nav>
                           <ul>
                             <li>
-                              <Link to={`${process.env.REACT_APP_PUBLIC_URL}/`}>
-                                {" "}
-                                HOME{" "}
-                              </Link>
+                              <Link to={`${BASE_URL}/`}> HOME </Link>
                             </li>
                             <li className="has-children has-children--multilevel-submenu">
-                              <Link
-                                to={`${process.env.REACT_APP_PUBLIC_URL}/services`}
-                              >
-                                SERVICES
-                              </Link>
+                              <Link to={`${BASE_URL}/services`}>SERVICES</Link>
                               <ul className="submenu">
                                 <li>
-                                  <Link
-                                    to={`${process.env.REACT_APP_PUBLIC_URL}/services`}
-                                  >
+                                  <Link to={`${BASE_URL}/services`}>
                                     Services
                                   </Link>
                                 </li>
                                 <li>
                                   <Link
-                                    to={`${process.env.REACT_APP_PUBLIC_URL}/services/aeration`}
+                                    to={`${BASE_URL}/services/${SERVICES_PATHS.AERATION}`}
                                   >
                                     Aeration
                                   </Link>
                                 </li>
                                 <li>
                                   <Link
-                                    to={`${process.env.REACT_APP_PUBLIC_URL}/services/dethatching`}
+                                    to={`${BASE_URL}/services/${SERVICES_PATHS.DETHATCHING}`}
                                   >
                                     Dethatching
                                   </Link>
                                 </li>
                                 <li>
                                   <Link
-                                    to={`${process.env.REACT_APP_PUBLIC_URL}/services/window-cleaning`}
+                                    to={`${BASE_URL}/services/${SERVICES_PATHS.WINDOW_CLEANING}`}
                                   >
                                     Window Cleaning
                                   </Link>
@@ -188,30 +180,26 @@ class NavBar extends Component {
                               </ul>
                             </li>
                             <li>
-                              <Link
-                                to={`${process.env.REACT_APP_PUBLIC_URL}/about-us`}
-                              >
-                                ABOUT
-                              </Link>
+                              <Link to={`${BASE_URL}/about-us`}>ABOUT</Link>
                             </li>
                             {/* region */}
                             {/* <li className="has-children has-children--multilevel-submenu">
                                 <Link
-                                  to={`${process.env.REACT_APP_PUBLIC_URL}/projects`}
+                                  to={`${BASE_URL}/projects`}
                                 >
                                   PROJECT
                                 </Link>
                                 <ul className="submenu">
                                   <li>
                                     <Link
-                                      to={`${process.env.REACT_APP_PUBLIC_URL}/projects`}
+                                      to={`${BASE_URL}/projects`}
                                     >
                                       Project Page
                                     </Link>
                                   </li>
                                   <li>
                                     <Link
-                                      to={`${process.env.REACT_APP_PUBLIC_URL}/project-details`}
+                                      to={`${BASE_URL}/project-details`}
                                     >
                                       Project Details
                                     </Link>
@@ -220,35 +208,35 @@ class NavBar extends Component {
                               </li> */}
                             {/* <li className="has-children has-children--multilevel-submenu">
                                 <Link
-                                  to={`${process.env.REACT_APP_PUBLIC_URL}/blog-left-sidebar`}
+                                  to={`${BASE_URL}/blog-left-sidebar`}
                                 >
                                   BLOG
                                 </Link>
                                 <ul className="submenu">
                                   <li>
                                     <Link
-                                      to={`${process.env.REACT_APP_PUBLIC_URL}/blog-left-sidebar`}
+                                      to={`${BASE_URL}/blog-left-sidebar`}
                                     >
                                       Blog Left Sidebar
                                     </Link>
                                   </li>
                                   <li>
                                     <Link
-                                      to={`${process.env.REACT_APP_PUBLIC_URL}/blog-right-sidebar`}
+                                      to={`${BASE_URL}/blog-right-sidebar`}
                                     >
                                       Blog Right Sidebar
                                     </Link>
                                   </li>
                                   <li>
                                     <Link
-                                      to={`${process.env.REACT_APP_PUBLIC_URL}/blog-details-left-sidebar`}
+                                      to={`${BASE_URL}/blog-details-left-sidebar`}
                                     >
                                       Blog Details Left Sidebar
                                     </Link>
                                   </li>
                                   <li>
                                     <Link
-                                      to={`${process.env.REACT_APP_PUBLIC_URL}/blog-details-right-sidebar`}
+                                      to={`${BASE_URL}/blog-details-right-sidebar`}
                                     >
                                       Blog Details Right Sidebar
                                     </Link>
@@ -257,11 +245,7 @@ class NavBar extends Component {
                               </li> */}
                             {/* endregion */}
                             <li>
-                              <Link
-                                to={`${process.env.REACT_APP_PUBLIC_URL}/contact-us`}
-                              >
-                                CONTACT
-                              </Link>{" "}
+                              <Link to={`${BASE_URL}/contact-us`}>CONTACT</Link>{" "}
                             </li>
                           </ul>
                         </nav>

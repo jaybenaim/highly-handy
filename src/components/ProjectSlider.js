@@ -44,7 +44,7 @@ class ProjectSlider extends Component {
               <div className="col-lg-6">
                 <div className="image">
                   <img
-                    src={`assets/img/projects/${val.img}`}
+                    src={`/assets/img/projects/${val.img}`}
                     className="img-fluid"
                     alt=""
                   />

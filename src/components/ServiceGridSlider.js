@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { GiFamilyHouse, GiHighGrass, GiRake } from "react-icons/gi";
+import { BASE_URL, SERVICES_PATHS } from "../consts";
 import SwiperSlider, { SwiperSlide } from "./swiper";
 
 class ServiceGridSlider extends Component {
@@ -32,7 +33,7 @@ class ServiceGridSlider extends Component {
         serviceTitle: "Aeration",
         serviceExcerpt:
           "Aeration opens up the grass in order for the grass seeds, topsoil, and fertilizer to penetrate the ground rather than have it sit on top.",
-        serviceUrl: "aeration",
+        serviceUrl: SERVICES_PATHS.AERATION,
       },
       {
         img: "detatcher-370x247.jpg",
@@ -40,7 +41,7 @@ class ServiceGridSlider extends Component {
         serviceTitle: "Dethatching",
         serviceExcerpt:
           "Dethatching is the first thing you need to do for your lawn to get the best results. It helps remove all the dead grass to allow water and sun to get an uninterrupted source of nutrients.",
-        serviceUrl: "dethatching",
+        serviceUrl: SERVICES_PATHS.DETHATCHING,
       },
       {
         img: "service1.jpg",
@@ -48,7 +49,7 @@ class ServiceGridSlider extends Component {
         serviceTitle: "Window Cleaning",
         serviceExcerpt:
           "We have been cleaning windows for 10+ years and we have taken all our clients concerns and came up with a solution.",
-        serviceUrl: "window-cleaning",
+        serviceUrl: SERVICES_PATHS.WINDOW_CLEANING,
       },
     ];
 
@@ -59,11 +60,9 @@ class ServiceGridSlider extends Component {
             <div className="service-grid-item">
               <div className="service-grid-item__image">
                 <div className="service-grid-item__image-wrapper">
-                  <a
-                    href={`${process.env.REACT_APP_PUBLIC_URL}/services/${val.serviceUrl}`}
-                  >
+                  <a href={`${BASE_URL}/services/${val.serviceUrl}`}>
                     <img
-                      src={`assets/img/services/${val.img}`}
+                      src={`/assets/img/services/${val.img}`}
                       className="img-fluid"
                       alt=""
                     />
@@ -75,15 +74,13 @@ class ServiceGridSlider extends Component {
               </div>
               <div className="service-grid-item__content">
                 <h3 className="title">
-                  <a
-                    href={`${process.env.REACT_APP_PUBLIC_URL}/services/${val.serviceUrl}`}
-                  >
+                  <a href={`${BASE_URL}/services/${val.serviceUrl}`}>
                     {val.serviceTitle}
                   </a>
                 </h3>
                 <p className="subtitle">{val.serviceExcerpt}</p>
                 <a
-                  href={`${process.env.REACT_APP_PUBLIC_URL}/services/${val.serviceUrl}`}
+                  href={`${BASE_URL}/services/${val.serviceUrl}`}
                   className="see-more-link"
                 >
                   SEE MORE

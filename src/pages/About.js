@@ -8,6 +8,7 @@ import MobileMenu from "../components/MobileMenu";
 import NavBar from "../components/NavBar";
 import TeamMemberGrid from "../components/TeamMemberGrid";
 import TestimonialSlider from "../components/TestimonialSlider";
+import { BASE_URL } from "../consts";
 class About extends Component {
   constructor() {
     super();
@@ -32,7 +33,7 @@ class About extends Component {
         <div
           className="breadcrumb-area breadcrumb-bg"
           style={{
-            backgroundImage: `url(assets/img/backgrounds/funfact-bg.jpg)`,
+            backgroundImage: `url(/assets/img/backgrounds/funfact-bg.jpg)`,
           }}
         >
           <div className="container">
@@ -60,7 +61,7 @@ class About extends Component {
               <div className="row row-25 align-items-center">
                 <div className="col-lg-6 col-12 mb-30">
                   <div className="about-image-two">
-                    <img src="assets/img/about/about-3.jpg" alt="" />
+                    <img src="/assets/img/about/about-3.jpg" alt="" />
                     <span className="video-popup">
                       <ModalVideo
                         channel="youtube"
@@ -113,12 +114,12 @@ class About extends Component {
               <div className="about-wrapper row">
                 <div className="col-sm-6 col-12 order-1 order-lg-2">
                   <div className="about-image about-image-1">
-                    <img src="assets/img/about/about-1.jpg" alt="" />
+                    <img src="/assets/img/about/about-1.jpg" alt="" />
                   </div>
                 </div>
                 <div className="col-sm-6 col-12 order-2 order-lg-3">
                   <div className="about-image about-image-2">
-                    <img src="assets/img/about/about-2.jpg" alt="" />
+                    <img src="/assets/img/about/about-2.jpg" alt="" />
                   </div>
                 </div>
                 <div className="col-lg-6 col-12 order-3 order-lg-1">
@@ -146,7 +147,7 @@ class About extends Component {
                       Itaque earum rerum hic tenetur a sapie
                     </p>
                     <a
-                      href={`${process.env.REACT_APP_PUBLIC_URL}/contact-us`}
+                      href={`${BASE_URL}/contact-us`}
                       className="ht-btn--default ht-btn--default--dark-hover section-space--top--20"
                     >
                       Contact us

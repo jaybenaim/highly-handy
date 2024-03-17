@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { BASE_URL } from "../consts";
 
 class AboutText extends Component {
   render() {
@@ -20,7 +21,7 @@ class AboutText extends Component {
                     aliqua. Ut enim ad minim
                   </p>
                   <a
-                    href={`${process.env.REACT_APP_PUBLIC_URL}/contact-us`}
+                    href={`${BASE_URL}/contact-us`}
                     className="ht-btn ht-btn--round"
                   >
                     CONTACT US
@@ -30,7 +31,7 @@ class AboutText extends Component {
               <div className="col-md-6">
                 <div className="cta-video-image__image">
                   <img
-                    src="assets/img/backgrounds/about.png"
+                    src="/assets/img/backgrounds/about.png"
                     className="img-fluid"
                     alt=""
                   />

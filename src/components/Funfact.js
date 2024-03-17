@@ -27,7 +27,7 @@ class Funfact extends Component {
           className="single-fact col-md-6 col-6 section-space--bottom--30"
           key={i}
         >
-          <img src={`assets/img/icons/${val.img}`} alt="" />
+          <img src={`/assets/img/icons/${val.img}`} alt="" />
           <h1 className="counter">
             <VisibilitySensor
               onChange={this.onVisibilityChange}
@@ -48,7 +48,7 @@ class Funfact extends Component {
         <div
           className="funfact-section section-space--inner--100 funfact-bg"
           style={{
-            backgroundImage: `url(assets/img/services/grass-top-view.jpg)`,
+            backgroundImage: `url(/assets/img/services/grass-top-view.jpg)`,
           }}
         >
           <div className="container">

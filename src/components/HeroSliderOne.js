@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { BASE_URL } from "../consts";
 import SwiperSlider, { SwiperSlide } from "./swiper";
 
 class HeroSliderOne extends Component {
@@ -16,23 +17,23 @@ class HeroSliderOne extends Component {
     let data = [
       {
         bgImg: "garden.jpg",
-        sliderTitle: "Build Your Dream With Passion",
+        sliderTitle: "Welcome Home: Expert Care for Your Lawn",
         sliderSubtitle:
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusm tempor incididunt ut labore et dolore.",
+          "Get a Gorgeous Green Lawn That's the Envy of the Neighborhood",
         btnLink: "contact-us",
       },
       {
         bgImg: "garden2.jpg",
-        sliderTitle: "Build Your Dream With Passion",
+        sliderTitle: "Your Home, Our Priority: Tailored Home Care Services",
         sliderSubtitle:
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusm tempor incididunt ut labore et dolore.",
+          "Bring Life Back to Your Yard with Easy Garden Restoration",
         btnLink: "contact-us",
       },
       {
         bgImg: "front-lawn.jpg",
         sliderTitle: "Build Your Dream With Passion",
         sliderSubtitle:
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusm tempor incididunt ut labore et dolore.",
+          "See Clearly Through Sparkling Windows That Brighten Your Home",
         btnLink: "contact-us",
       },
     ];
@@ -42,7 +43,9 @@ class HeroSliderOne extends Component {
         <SwiperSlide key={i}>
           <div
             className="hero-slider__single-item"
-            style={{ backgroundImage: `url(assets/img/services/${val.bgImg})` }}
+            style={{
+              backgroundImage: `url(/assets/img/services/${val.bgImg})`,
+            }}
           >
             <div className="bg-black opacity-50 position-absolute w-100 h-100" />
             <div className="hero-slider__content-wrapper">
@@ -54,7 +57,7 @@ class HeroSliderOne extends Component {
                       <p className="hero-slider__text">{val.sliderSubtitle}</p>
                       <a
                         className="hero-slider__btn"
-                        href={`${process.env.REACT_APP_PUBLIC_URL}/${val.btnLink}`}
+                        href={`${BASE_URL}/${val.btnLink}`}
                       >
                         {" "}
                         GET STARTED

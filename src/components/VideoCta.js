@@ -51,7 +51,7 @@ class VideoCta extends Component {
                     <button onClick={this.openModal}>
                       <div className="cta-video-image__image">
                         <img
-                          src="assets/img/backgrounds/video-cta.jpg"
+                          src="/assets/img/backgrounds/video-cta.jpg"
                           className="img-fluid"
                           alt=""
                         />
