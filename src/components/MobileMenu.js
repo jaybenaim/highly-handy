@@ -124,11 +124,19 @@ class MobileMenu extends Component {
                 </div>
                 {/*Off Canvas Widget Social Start*/}
                 <div className="off-canvas-widget-social">
-                  <a href="https://www.facebook.com/highlyhandyLawnCare">
+                  <a
+                    href="https://www.facebook.com/highlyhandyLawnCare"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <i className="zmdi zmdi-facebook" />
                   </a>
 
-                  <a href="https://www.instagram.com/highlyhandy_lawn_care_/">
+                  <a
+                    href="https://www.instagram.com/highlyhandyhomeservices/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <i className="zmdi zmdi-instagram" />
                   </a>
                 </div>

@@ -59,12 +59,20 @@ class NavBar extends Component {
                       <div className="social-links social-links--white-topbar d-inline-block">
                         <ul>
                           <li>
-                            <a href="https://www.facebook.com/highlyhandyLawnCare">
+                            <a
+                              href="https://www.facebook.com/highlyhandyLawnCare"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
                               <i className="zmdi zmdi-facebook" />
                             </a>
                           </li>
                           <li>
-                            <a href="https://www.instagram.com/highlyhandy_lawn_care_/">
+                            <a
+                              href="https://www.instagram.com/highlyhandyhomeservices/"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
                               <i className="zmdi zmdi-instagram" />
                             </a>
                           </li>
