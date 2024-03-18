@@ -17,6 +17,7 @@
     "react-tabs": "^5.1.0",
     "react-visibility-sensor": "^5.1.1",
     "swiper": "^8.3.2",
+    "web-vitals": "^3.5.2",
     "yet-another-react-lightbox": "^2.0.3"
   },
   "scripts": {
