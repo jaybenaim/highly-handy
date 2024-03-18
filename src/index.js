@@ -1,12 +1,10 @@
+import React from "react";
 import "react-app-polyfill/ie11";
 import "react-app-polyfill/stable";
-import React from "react";
-import { createRoot } from 'react-dom/client'
+import { createRoot } from "react-dom/client";
+import * as serviceWorker from "../public/serviceWorker";
+import App from "./app";
 import "./assets/scss/style.scss";
-import * as serviceWorker from "./serviceWorker";
-import App from "./app"
-
-
 
 const container = document.getElementById("root");
 const root = createRoot(container);
