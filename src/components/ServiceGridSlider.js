@@ -76,6 +76,7 @@ class ServiceGridSlider extends Component {
                       className="img-fluid object-fit-cover"
                       style={{ maxHeight: "194px" }}
                       alt={val.serviceTitle}
+                      loading="lazy"
                     />
                   </Link>
                 </div>
