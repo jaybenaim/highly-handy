@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Footer from "../components/Footer";
+import Head from "../components/Head";
 import MobileMenu from "../components/MobileMenu";
 import NavBar from "../components/NavBar";
 class Contact extends Component {
@@ -11,6 +12,8 @@ class Contact extends Component {
   render() {
     return (
       <div>
+        <Head title={`Contact`} />
+
         {/* Navigation bar */}
         <NavBar />
 

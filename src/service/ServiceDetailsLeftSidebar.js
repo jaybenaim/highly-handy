@@ -2,6 +2,7 @@ import React from "react";
 import { Link, useParams } from "react-router-dom";
 
 import Footer from "../components/Footer";
+import Head from "../components/Head";
 import MobileMenu from "../components/MobileMenu";
 import NavBar from "../components/NavBar";
 import { BASE_URL } from "../consts";
@@ -16,6 +17,8 @@ const ServiceDetailsLeftSidebar = () => {
 
   return (
     <div>
+      <Head title={`Services - ${service}`} />
+
       {/* Navigation bar */}
       <NavBar />
 

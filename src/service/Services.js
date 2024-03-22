@@ -3,6 +3,7 @@ import { BsBricks } from "react-icons/bs";
 import { GiFamilyHouse, GiHighGrass, GiRake } from "react-icons/gi";
 import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
+import Head from "../components/Head";
 import MobileMenu from "../components/MobileMenu";
 import NavBar from "../components/NavBar";
 import { BASE_URL, SERVICES, SERVICES_PATHS } from "../consts";
@@ -87,6 +88,7 @@ class Services extends Component {
 
     return (
       <div>
+        <Head title="Services" />
         {/* Navigation bar */}
         <NavBar />
 
