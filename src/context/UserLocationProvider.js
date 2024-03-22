@@ -1,6 +1,6 @@
 import mixpanel from "mixpanel-browser";
 import React, { createContext, useContext, useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { IS_DEVELOPMENT } from "../consts";
 
 const UserLocationContext = createContext();
@@ -9,6 +9,7 @@ export const useUserLocation = () => useContext(UserLocationContext);
 
 const UserLocationProvider = ({ children }) => {
   const navigate = useNavigate();
+  const location = useLocation();
   const [userLocation, setUserLocation] = useState(null);
 
   useEffect(() => {
@@ -31,9 +32,7 @@ const UserLocationProvider = ({ children }) => {
       }
     });
 
-    return () => {
-      unlisten();
-    };
+    return unlisten;
   }, [navigate, userLocation]);
 
   useEffect(() => {
@@ -73,6 +72,19 @@ const UserLocationProvider = ({ children }) => {
     const cached = getCachedLocation();
     !cached && fetchUserLocation();
   }, []);
+
+  useEffect(() => {
+    // Track initial page view
+    if (!IS_DEVELOPMENT && userLocation) {
+      const initialReferer = document.referrer || "";
+      mixpanel.track("Page View", {
+        page: location.pathname,
+        referer: initialReferer,
+        $city: userLocation.city,
+        $country: userLocation.country,
+      });
+    }
+  }, [location.pathname, userLocation]);
 
   return (
     <UserLocationContext.Provider value={{ userLocation }}>
