@@ -17,10 +17,10 @@ const MixPanelProvider = ({ children }) => {
     try {
       const response = await fetch(BACKEND_BASE_URL + "/api/mixpanel", {
         method: "POST",
-        body: {
+        body: JSON.stringify({
           eventName,
           eventData,
-        },
+        }),
       });
 
       console.log("response", response);
