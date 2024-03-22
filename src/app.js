@@ -13,7 +13,7 @@ const NoMAtch = lazy(() => import("./pages/404"));
 
 const App = () => {
   useEffect(() => {
-    mixpanel.init("YOUR_TOKEN", {
+    mixpanel.init(process.env.REACT_APP_MIXPANEL_PROJECT_ID, {
       debug: IS_DEVELOPMENT,
       track_pageview: true,
       persistence: "localStorage",
