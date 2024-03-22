@@ -53,7 +53,7 @@ class Footer extends Component {
                           <a href={`${BASE_URL}/`}>
                             <img
                               src="/assets/img/logo/logo.jpg"
-                              className="img-fluid h-50 w-50"
+                              className="img-fluid h-25 w-25 lg:h-50 lg:w-50"
                               alt=""
                             />
                           </a>
