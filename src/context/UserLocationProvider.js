@@ -1,39 +1,33 @@
-import mixpanel from "mixpanel-browser";
 import React, { createContext, useContext, useEffect, useState } from "react";
-import { useLocation, useNavigate } from "react-router-dom";
-import { IS_DEVELOPMENT } from "../consts";
+import { useLocation } from "react-router-dom";
+import { IS_DEVELOPMENT, MIXPANEL_EVENTS } from "../consts";
+import { useMixPanel } from "./MixPanelProvider";
 
 const UserLocationContext = createContext();
 
 export const useUserLocation = () => useContext(UserLocationContext);
 
 const UserLocationProvider = ({ children }) => {
-  const navigate = useNavigate();
   const location = useLocation();
-  const [userLocation, setUserLocation] = useState(null);
+  const [userLocation, setUserLocation] = useState({
+    city: "",
+    country: "",
+  });
+  const { mixpanelTrack } = useMixPanel();
 
-  useEffect(() => {
-    mixpanel.init(process.env.REACT_APP_MIXPANEL_PROJECT_ID, {
-      debug: IS_DEVELOPMENT,
-      track_pageview: true,
-      persistence: "localStorage",
-    });
-
-    const unlisten = navigate((location) => {
-      console.log("Route changed:", location.pathname);
-      if (!IS_DEVELOPMENT && userLocation) {
-        const initialReferer = document.referrer || "";
-        mixpanel.track("Page View", {
-          page: location.pathname,
-          referer: initialReferer,
-          $city: userLocation.city,
-          $country: userLocation.country,
-        });
-      }
-    });
-
-    return unlisten;
-  }, [navigate, userLocation]);
+  const trackPageView = () => {
+    if (!IS_DEVELOPMENT && userLocation) {
+      const initialReferer = document.referrer || "";
+      mixpanelTrack(MIXPANEL_EVENTS.PAGE_VIEW, {
+        page: location.pathname,
+        referer: initialReferer,
+        $city: userLocation.city,
+        $country: userLocation.country,
+      }).catch((err) => console.log(err));
+    } else {
+      console.log("Mixpanel disabled");
+    }
+  };
 
   useEffect(() => {
     const getCachedLocation = () => {
@@ -46,18 +40,10 @@ const UserLocationProvider = ({ children }) => {
 
     const fetchUserLocation = async () => {
       try {
-        const position = await new Promise((resolve, reject) => {
-          navigator.geolocation.getCurrentPosition(resolve, reject);
-        });
-
-        const { latitude, longitude } = position.coords;
-        const response = await fetch(
-          `https://nominatim.openstreetmap.org/reverse?lat=${latitude}&lon=${longitude}&format=json`
-        );
-
+        const response = await fetch("https://ipapi.co/json/");
         if (response.ok) {
           const data = await response.json();
-          const { city, country } = data.address;
+          const { latitude, longitude, city, country } = data;
           const locationData = { latitude, longitude, city, country };
           setUserLocation(locationData);
           localStorage.setItem("user_location", JSON.stringify(locationData));
@@ -71,20 +57,13 @@ const UserLocationProvider = ({ children }) => {
 
     const cached = getCachedLocation();
     !cached && fetchUserLocation();
+    trackPageView();
   }, []);
 
   useEffect(() => {
-    // Track initial page view
-    if (!IS_DEVELOPMENT && userLocation) {
-      const initialReferer = document.referrer || "";
-      mixpanel.track("Page View", {
-        page: location.pathname,
-        referer: initialReferer,
-        $city: userLocation.city,
-        $country: userLocation.country,
-      });
-    }
-  }, [location.pathname, userLocation]);
+    // Listen for location changes and track page view
+    trackPageView();
+  }, [location.pathname]); // Track page view when location.pathname changes
 
   return (
     <UserLocationContext.Provider value={{ userLocation }}>
