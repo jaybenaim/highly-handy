@@ -8,7 +8,7 @@ const MixPanelContext = createContext({
 export const useMixPanel = () => useContext(MixPanelContext);
 
 const MixPanelProvider = ({ children }) => {
-  const mixpanelTrack = async (eventName, eventData, debug = false) => {
+  const mixpanelTrack = async (eventName, userId, eventData, debug = false) => {
     if (IS_DEVELOPMENT || debug) {
       console.log("Mixpanel disabled");
       return;
@@ -20,6 +20,7 @@ const MixPanelProvider = ({ children }) => {
         body: JSON.stringify({
           eventName,
           eventData,
+          userId,
         }),
       });
 

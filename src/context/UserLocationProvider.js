@@ -1,5 +1,6 @@
 import React, { createContext, useContext, useEffect } from "react";
 import { useLocation } from "react-router-dom";
+import { v4 as uuidv4 } from "uuid";
 import { IS_DEVELOPMENT, MIXPANEL_EVENTS } from "../consts";
 import { useMixPanel } from "./MixPanelProvider";
 
@@ -17,8 +18,14 @@ const UserLocationProvider = ({ children }) => {
 
   const trackPageView = () => {
     if (!IS_DEVELOPMENT) {
+      let userId = localStorage.getItem("user_id");
+      if (!userId) {
+        userId = uuidv4();
+        localStorage.setItem("user_id", userId);
+      }
+
       const initialReferer = document.referrer || "";
-      mixpanelTrack(MIXPANEL_EVENTS.PAGE_VIEW, {
+      mixpanelTrack(MIXPANEL_EVENTS.PAGE_VIEW, userId, {
         page: location.pathname,
         referer: initialReferer,
         // $city: userLocation.city,
