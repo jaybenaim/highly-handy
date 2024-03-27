@@ -15,7 +15,7 @@ const NoMatch = lazy(() => import("./pages/404"));
 function App() {
   return (
     <Router>
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense fallback={null}>
         <AnalyticsProvider>
           <MixPanelProvider>
             <UserLocationProvider>
